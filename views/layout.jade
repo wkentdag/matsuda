@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		title= title
+		link(href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet')
+		link(rel='stylesheet', href='stylesheets/custom.css')
+		link(rel='stylesheet', href='/javascripts/bower_components/bootstrap/dist/css/bootstrap.css')
+		//- link(rel='stylesheet', href='/javascripts/bower_components/fullpage.js/jquery.fullPage.css')
+
+	body
+		block content
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+		script(src='javascripts/bower_components/fullpage.js/jquery.fullPage.min.js')
+		script(src='javascripts/bower_components/fullpage.js/vendors/jquery.easings.min.js')
+		script(src='javascripts/bower_components/bootstrap/dist/js/bootstrap.min.js')
+		script(src='javascripts/bower_components/fixie/fixie.min.js')

@@ -1,0 +1,26 @@
+{
+  "name": "matsuda",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wkentdag/matsuda",
+  "authors": [
+    "Will Kent-Daggett <willkentdaggett@gmail.com>"
+  ],
+  "description": "site source",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fullpage.js": "~2.0.7",
+    "bootstrap": "~3.2.0",
+    "fixie": "https://github.com/ryhan/fixie.git"
+  },
+  "devDependencies": {
+    "fixie": "https://github.com/ryhan/fixie.git"
+  }
+}

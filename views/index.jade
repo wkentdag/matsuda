@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+	#overlay
+			.title
+				h1= title
+
+			.category
+				p about
+			.category				
+				p work
+			.category
+				p cv
+			.category
+				p contact
+
+	.container-fluid
+		.row
+		- var i = 0
+		while i < 6
+			h2.fixie
+			section.fixie
+
+			- i++
