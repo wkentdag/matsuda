@@ -4,13 +4,30 @@
 	height:100px;
 	background-color: #fcfaf2;
 	z-index: 100;
-	border-style: solid;
+	/*border-style: solid;
 	border-width: 3px;
-	border-color: black;
+	border-color: black;*/
+}
+
+a:link, a:visited {
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #000000;
 }
 
 
+.fullpage {
+	background-color: #fcfaf2;
+}
 
+img {
+	max-width: 100%;
+	max-height: 400px;
+	vertical-align: bottom;
+}
 
 
 #overlay > * {

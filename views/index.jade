@@ -4,22 +4,41 @@ block content
 
 	#overlay
 			.title
-				h1= title
+				h1
+					a(href='')= title
 
 			.category
-				p about
+				p 
+					a(href='#about') about
 			.category				
-				p work
+				p 
+					a(href='#work') work
 			.category
-				p cv
+				p 
+					a(href='#cv') cv
 			.category
-				p contact
+				p 
+					a(href='#contact') contact
 
-	.container-fluid
-		.row
-		- var i = 0
-		while i < 6
+	.fullpage
+		.section(data-anchor='about')
 			h2.fixie
 			section.fixie
 
-			- i++
+		.section(data-anchor='work')
+			.slide
+				img.fixie
+			.slide
+				img.fixie
+
+		.section(data-anchor='cv')
+			h2.fixie
+			section.fixie
+
+		.section(data-anchor='contact')
+			h2.fixie
+			section.fixie
+
+
+
+			
