@@ -6,7 +6,6 @@ block content
 			.title
 				h1
 					a(href='')= title
-
 			.category
 				p 
 					a(href='#about') about
@@ -19,26 +18,34 @@ block content
 			.category
 				p 
 					a(href='#contact') contact
-
 	.fullpage
 		.section(data-anchor='about')
-			h2.fixie
-			section.fixie
+			.content
+				h2.fixie
+				section.fixie
 
 		.section(data-anchor='work')
-			.slide
-				img.fixie
-			.slide
-				img.fixie
+			- var i=0
+			while i < 10
+				.slide
+					button.btn.btn-lg.caption
+						span.glyphicon.glyphicon-search
+					img(src='https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg' border='5')
+
+				.slide
+					h3.fixie.caption
+					img.fixie
+				- i++
 
 		.section(data-anchor='cv')
-			h2.fixie
-			section.fixie
+			.content
+				h2.fixie
+				section.fixie
 
 		.section(data-anchor='contact')
-			h2.fixie
-			section.fixie
-
+			.content
+				h2.fixie
+				section.fixie
 
 
 			
