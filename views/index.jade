@@ -5,44 +5,55 @@ block content
 	#overlay
 			.title
 				h1
-					a(href='')= title
+					a(href='' )= title
 			.category
-				p 
-					a(href='#about') about
+				h4
+					a(href='#about' data-menuanchor='about') about
 			.category				
-				p 
-					a(href='#work') work
+				h4
+					a(href='#work' data-menuanchor='work') work
 			.category
-				p 
-					a(href='#cv') cv
+				h4
+					a(href='#cv' data-menuanchor='cv') cv
 			.category
-				p 
-					a(href='#contact') contact
+				h4
+					a(href='#contact' data-menuanchor='contact') contact
 	.fullpage
-		.section(data-anchor='about')
+		.section.home
+			.content
+				img(src='/images/work/landing.jpg')
+			
+		.section(data-anchor='about').about
 			.content
 				h2.fixie
 				section.fixie
 
-		.section(data-anchor='work')
-			- var i=0
-			while i < 10
-				.slide
-					button.btn.btn-lg.caption
-						span.glyphicon.glyphicon-search
-					img(src='https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg' border='5')
+		.section(data-anchor='work').work
+			
+			.slide.photoSlide
+				//- button.btn.btn-lg.caption
+				//- 	span.glyphicon.glyphicon-search
+				img(src='/images/work/tumblr1.jpg')
 
-				.slide
-					h3.fixie.caption
-					img.fixie
-				- i++
+			.slide.photoSlide
+				//- h3.fixie.caption
+				img(src='/images/work/tumblr2.jpg')
 
-		.section(data-anchor='cv')
+			.slide.photoSlide
+				//- h3.fixie.caption
+				img(src='/images/work/tumblr3.jpg')
+
+
+			.slide.photoSlide
+				//- h3.fixie.caption
+				img(src='/images/work/tumblr4.jpg')
+
+		.section(data-anchor='cv').cv
 			.content
 				h2.fixie
 				section.fixie
 
-		.section(data-anchor='contact')
+		.section(data-anchor='contact').contact
 			.content
 				h2.fixie
 				section.fixie
