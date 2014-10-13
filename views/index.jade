@@ -1,34 +1,46 @@
 extends layout
 
 block content
-
-	#overlay
-			.title
-				h1
-					a(href='' )= title
-			.category
-				h4
+	nav.navbar-default.navbar-fixed-top#overlay(role='navigation')
+		.navbar-header
+			button(type='button' data-toggle='collapse' data-target='#nav-example').navbar-toggle.collapsed
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			p.navbar-brand
+				a#home(href='/')=title
+		.collapse.navbar-collapse#nav-example
+			ul.nav.navbar-nav
+				li
 					a(href='#about' data-menuanchor='about') about
-			.category				
-				h4
-					a(href='#work' data-menuanchor='work') work
-			.category
-				h4
-					a(href='#cv' data-menuanchor='cv') cv
-			.category
-				h4
-					a(href='#contact' data-menuanchor='contact') contact
+				li
+					a(href='#wedding' data-menuanchor='wedding') wedding
+				li
+					a(href='#landscape' data-menuanchor='landscape') landscape
+				li
+					a(href='#portraits' data-menuanchor='portraits') portraits
 	.fullpage
-		.section.home
+		.section
 			.content
 				img(src='/images/work/landing.jpg')
 			
-		.section(data-anchor='about').about
+		.section(data-anchor='about')
 			.content
-				h2.fixie
-				section.fixie
+				h4 Hey, I'm Will!
+				p I've been doing photography since 2004 and teaching it since 2010. I like to take photos of things that I think are important. I was born and raised in Portland, Oregon, but Minnesota is home for now.
+				br
+				h4 Contact + Inquiries: 
+				p
+					a.notes(href="mailto:matsudaw@gmail.com") matsudaw@gmail.com
+					span  // 
+					a.notes(href="tel:5033132095") 503-313-2095
+				br
+				p.note [All work copyright Will Matsuda. Site by 
+					a.notes(href='http://wkd.pw' target="_blank") Will Kent-Daggett.]
 
-		.section(data-anchor='work').work
+
+		.section(data-anchor='wedding')
 			
 			.slide.photoSlide
 				//- button.btn.btn-lg.caption
@@ -48,15 +60,25 @@ block content
 				//- h3.fixie.caption
 				img(src='/images/work/tumblr4.jpg')
 
-		.section(data-anchor='cv').cv
-			.content
-				h2.fixie
-				section.fixie
+		.section(data-anchor='landscape')
+			.slide.photoSlide
+				img(src='/images/work/tumblr1.jpg')
+			.slide.photoSlide
+				img(src='/images/work/tumblr2.jpg')
+			.slide.photoSlide
+				img(src='/images/work/tumblr3.jpg')
+			.slide.photoSlide
+				img(src='/images/work/tumblr4.jpg')
 
-		.section(data-anchor='contact').contact
-			.content
-				h2.fixie
-				section.fixie
+		.section(data-anchor='portraits')
+			.slide.photoSlide
+				img(src='/images/work/tumblr1.jpg')
+			.slide.photoSlide
+				img(src='/images/work/tumblr2.jpg')
+			.slide.photoSlide
+				img(src='/images/work/tumblr3.jpg')
+			.slide.photoSlide
+				img(src='/images/work/tumblr4.jpg')
 
 
 			
