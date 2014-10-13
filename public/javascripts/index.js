@@ -30,6 +30,6 @@ $(document).ready(function () {
 	$.fn.fullpage.setScrollingSpeed(500);	
 });
 
-var pages = ['#', 'about', 'wedding', 'landscape', 'portraits'];
+var pages = ['#', 'about', 'mpr', 'gp', 'lovers', 'fashion', 'everyday', 'video'];
 
 var currentPage;

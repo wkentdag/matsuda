@@ -14,12 +14,23 @@ block content
 			ul.nav.navbar-nav
 				li
 					a(href='#about' data-menuanchor='about') about
+				li.dropdown
+					a.dropdown-toggle(data-toggle='dropdown') news 
+						span.caret
+					ul.dropdown-menu(role='menu')
+						li
+							a(href='#mpr' data-menuanchor='mpr') minnesota public radio
+						li
+							a(href='#gp' data-menuanchor='gp') the global post
+					
 				li
-					a(href='#wedding' data-menuanchor='wedding') wedding
+					a(href='#lovers' data-menuanchor='lovers') lovers
 				li
-					a(href='#landscape' data-menuanchor='landscape') landscape
+					a(href='#fashion' data-menuanchor='fashion') fashion
 				li
-					a(href='#portraits' data-menuanchor='portraits') portraits
+					a(href='#everyday' data-menuanchor='everyday') everyday
+				li
+					a(href='#video' data-menuanchor='video') video
 	.fullpage
 		.section
 			.content
@@ -35,50 +46,31 @@ block content
 					a.notes(href="mailto:matsudaw@gmail.com") matsudaw@gmail.com
 					span  | 
 					a.notes(href="tel:5033132095") 503-313-2095
-				p.note [All work copyright Will Matsuda | Site by 
+				p.note [All work copyright Will Matsuda | 
+					a.notes(href='http://github.com/wkentdag/matsuda' target='_blank') Site 
+					span by  
 					a.notes(href='http://wkd.pw' target="_blank") Will Kent-Daggett
 					span ]
-
-
-		.section(data-anchor='wedding')
-			
-			.slide.photoSlide
-				//- button.btn.btn-lg.caption
-				//- 	span.glyphicon.glyphicon-search
-				img(src='/images/work/tumblr1.jpg')
-
-			.slide.photoSlide
-				//- h3.fixie.caption
-				img(src='/images/work/tumblr2.jpg')
-
-			.slide.photoSlide
-				//- h3.fixie.caption
-				img(src='/images/work/tumblr3.jpg')
-
-
-			.slide.photoSlide
-				//- h3.fixie.caption
-				img(src='/images/work/tumblr4.jpg')
-
-		.section(data-anchor='landscape')
-			.slide.photoSlide
-				img(src='/images/work/tumblr1.jpg')
-			.slide.photoSlide
-				img(src='/images/work/tumblr2.jpg')
-			.slide.photoSlide
-				img(src='/images/work/tumblr3.jpg')
-			.slide.photoSlide
-				img(src='/images/work/tumblr4.jpg')
-
-		.section(data-anchor='portraits')
-			.slide.photoSlide
-				img(src='/images/work/tumblr1.jpg')
-			.slide.photoSlide
-				img(src='/images/work/tumblr2.jpg')
-			.slide.photoSlide
-				img(src='/images/work/tumblr3.jpg')
-			.slide.photoSlide
-				img(src='/images/work/tumblr4.jpg')
+		.section(data-anchor='mpr')
+			each url in images.mpr
+				.slide.photoSlide
+					img(src=url)
+		.section(data-anchor='gp')
+			each url in images.gp
+				.slide.photoSlide
+					img(src=url)
+		.section(data-anchor='lovers')
+			each url in images.lovers
+				.slide.photoSlide
+					img(src=url)
+		.section(data-anchor='fashion')
+			each url in images.fashion
+				.slide.photoSlide
+					img(src=url)
+		.section(data-anchor='everyday')
+			each url in images.everyday
+				.slide.photoSlide
+					img(src=url)
 
 
 			

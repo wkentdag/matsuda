@@ -101,6 +101,7 @@ a {
 a:hover {
 	color: #e9573f !important;
 	text-decoration: none !important;
+	background: transparent !important;
 }
 
 .hover {
@@ -116,9 +117,23 @@ h4 {
 
 }
 
-/*.hover:hover {
-	color: red !important;
-}*/
+.dropdown-toggle {
+	background: transparent !important;
+}
+
+.dropdown.open > a {
+	color: #e9573f !important;
+	text-decoration: none;
+}
+
+ul.dropdown-menu {
+	background: transparent !important;
+	outline: none;
+	border: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
 
 * {
 	font-family: 'Volkorn', Georgia, Serif;
