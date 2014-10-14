@@ -55,10 +55,14 @@ router.get('/', function(req, res) {
 													function (err, data) {
 														if (err) {console.log(err);} else {
 															for (var p in data.posts) {
-																// console.log(data.posts[p].permalink_url);
-																video.push(data.posts[p].permalink_url);
+																var raw = data.posts[p].permalink_url;
+																console.log(raw);
+																var split = raw.split("?v=");
+																var embed = '//www.youtube.com/embed/' + split[1];
+																console.log(embed);
+																video.push(embed);
 															}
-															console.log(JSON.stringify(data));
+															// console.log(JSON.stringify(data));
 														}
 														var images = [];
 														images.lovers = lovers;

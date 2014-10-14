@@ -9,28 +9,28 @@ block content
 				span.icon-bar
 				span.icon-bar
 			p.navbar-brand
-				a#home(href='/')=title
+				a#home.nav-link(href='/')=title
 		.collapse.navbar-collapse#nav-example
 			ul.nav.navbar-nav
 				li
-					a(href='#about' data-menuanchor='about') about
+					a.nav-link(href='#about' data-menuanchor='about') about
 				li.dropdown
-					a.dropdown-toggle(data-toggle='dropdown') news 
+					a.nav-link.dropdown-toggle(data-toggle='dropdown') news 
 						span.caret
 					ul.dropdown-menu(role='menu')
 						li
-							a(href='#mpr' data-menuanchor='mpr') minnesota public radio
+							a.nav-link(href='#mpr' data-menuanchor='mpr') minnesota public radio
 						li
-							a(href='#gp' data-menuanchor='gp') the global post
+							a.nav-link(href='#gp' data-menuanchor='gp') the global post
 					
 				li
-					a(href='#lovers' data-menuanchor='lovers') lovers
+					a.nav-link(href='#lovers' data-menuanchor='lovers') lovers
 				li
-					a(href='#fashion' data-menuanchor='fashion') fashion
+					a.nav-link(href='#fashion' data-menuanchor='fashion') fashion
 				li
-					a(href='#everyday' data-menuanchor='everyday') everyday
+					a.nav-link(href='#everyday' data-menuanchor='everyday') everyday
 				li
-					a(href='#video' data-menuanchor='video') video
+					a.nav-link(href='#video' data-menuanchor='video') video
 	.fullpage
 		.section
 			.content
@@ -77,7 +77,7 @@ block content
 					- var bg = 'background-image:' + url;
 					//- video.vid(autoplay="autoplay" controls="controls")
 					//- 	source(src='//www.youtube.com/embed/M5Gz4zCckkg' type="video/mp4")
-					iframe(src='//www.youtube.com/embed/M5Gz4zCckkg', frameborder='0', allowfullscreen='allowfullscreen')
+					iframe(src=url, frameborder='0', allowfullscreen='allowfullscreen')
 
 
 			
