@@ -71,6 +71,13 @@ block content
 			each url in images.everyday
 				.slide.photoSlide
 					img(src=url)
+		.section(data-anchor='video')
+			each url in images.video
+				.slide.photoSlide
+					- var bg = 'background-image:' + url;
+					//- video.vid(autoplay="autoplay" controls="controls")
+					//- 	source(src='//www.youtube.com/embed/M5Gz4zCckkg' type="video/mp4")
+					iframe(src='//www.youtube.com/embed/M5Gz4zCckkg', frameborder='0', allowfullscreen='allowfullscreen')
 
 
 			
