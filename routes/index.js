@@ -51,21 +51,37 @@ router.get('/', function(req, res) {
 													globalpost.push(data.posts[p].photos[0].alt_sizes[0].url);
 												}
 
+												client.posts('williammatsuda', {type: 'video', tag: 'video', limit: 10},
+													function (err, data) {
+														if (err) {console.log(err);} else {
+															for (var p in data.posts) {
+																var raw = data.posts[p].permalink_url;
+																console.log(raw);
+																var split = raw.split("?v=");
+																var embed = '//www.youtube.com/embed/' + split[1];
+																console.log(embed);
+																video.push(embed);
+															}
+															// console.log(JSON.stringify(data));
+														}
+														var images = [];
+														images.lovers = lovers;
+														images.fashion = fashion;
+														images.everyday = everyday;
+														images.mpr = mpr;
+														images.gp = globalpost;
+														images.video = video;
+
+														// console.log(images);
+														res.render('index', {
+															title: 'Will Matsuda',
+															images: images
+														});
+													});
+
+
 												// console.log('global post: ')
 												// console.log(globalpost);
-
-												var images = [];
-												images.lovers = lovers;
-												images.fashion = fashion;
-												images.everyday = everyday;
-												images.mpr = mpr;
-												images.gp = globalpost;
-
-												// console.log(images);
-												res.render('index', {
-													title: 'Will Matsuda',
-													images: images
-												});
 											}
 										}); //	end gp get
 								}
