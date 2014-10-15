@@ -21,6 +21,8 @@ $(document).ready(function () {
 					// document.location.hash = page;
 					if (page === '#') {
 						var selector = '#home'
+					} else if (page === 'mpr' || page === 'gp') {
+						// var selector = "a[href$=" + '"' + page + '"' + "]" + ', a[href=$"news"]';
 					} else {
 						var selector = "a[href$=" + '"' + page + '"' + "]";
 					}
