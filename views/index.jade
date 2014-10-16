@@ -27,6 +27,8 @@ block content
 					li
 						a.nav-link(href='#lovers' data-menuanchor='lovers') lovers
 					li
+						a.nav-link(href='#travel' data-menuanchor='travel') travel
+					li
 						a.nav-link(href='#fashion' data-menuanchor='fashion') fashion
 					li
 						a.nav-link(href='#everyday' data-menuanchor='everyday') everyday
@@ -43,16 +45,18 @@ block content
 				h4 Hey, I'm Will!
 				p I've been doing photography since 2004 and teaching it since 2010. I like to take photos of things that I think are important. I was born and raised in Portland, Oregon, but Minnesota is home for now.
 				br
-				h4 Contact + Inquiries: 
+				h4 contact + inquiries: 
 				p
-					a.notes(href="mailto:matsudaw@gmail.com") matsudaw@gmail.com
+					a.notes.secondary(href="mailto:matsudaw@gmail.com") matsudaw@gmail.com
 					span  | 
-					a.notes(href="tel:5033132095") 503-313-2095
-				p.note [All work copyright Will Matsuda | 
-					a.notes(href='http://github.com/wkentdag/matsuda' target='_blank') Site 
-					span by  
-					a.notes(href='http://wkd.pw' target="_blank") Will Kent-Daggett
-					span ]
+					a.notes.secondary(href="tel:5033132095") 503-313-2095
+				button(type='button').btn 
+					a.btn-link(href='https://www.tumblr.com/follow/williammatsuda' target='_blank') follow on tumblr
+				p.note.secondary.secondary [all work copyright Will Matsuda | 
+					a.notes.secondary(href='http://github.com/wkentdag/matsuda' target='_blank') site 
+					span.secondary by  
+					a.notes.secondary(href='http://wkd.pw' target="_blank") Will Kent-Daggett
+					span.secondary ]
 		.section(data-anchor='mpr')
 			each url in images.mpr
 				.slide.photoSlide
@@ -63,6 +67,10 @@ block content
 					img(src=url)
 		.section(data-anchor='lovers')
 			each url in images.lovers
+				.slide.photoSlide
+					img(src=url)
+		.section(data-anchor='travel')
+			each url in images.travel
 				.slide.photoSlide
 					img(src=url)
 		.section(data-anchor='fashion')

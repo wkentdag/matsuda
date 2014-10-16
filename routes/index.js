@@ -12,6 +12,8 @@ router.get('/', function(req, res) {
 	var video = [];
 	var mpr = [];
 	var globalpost = [];
+	var travel = [];
+	var landing = [];
 
 	client.posts('williammatsuda', {type: 'photo', tag: 'lovers', limit: 10}, function (err, data) {
 		if (err) {console.log(err);} else {
@@ -64,19 +66,38 @@ router.get('/', function(req, res) {
 															}
 															// console.log(JSON.stringify(data));
 														}
-														var images = [];
-														images.lovers = lovers;
-														images.fashion = fashion;
-														images.everyday = everyday;
-														images.mpr = mpr;
-														images.gp = globalpost;
-														images.video = video;
 
-														// console.log(images);
-														res.render('index', {
-															title: 'Will Matsuda',
-															images: images
-														});
+														client.posts('williammatsuda', {type: 'photo', tag: 'travel', limit: 10},
+															function (err, data) {
+																if (err) {console.log(err);} else {
+																	for (var p in data.posts) {
+																		travel.push(data.posts[p].photos[0].alt_sizes[0].url);
+																	}
+																}
+
+																client.posts('williammatsuda', {type: 'photo', tag: 'landing', limit: 1},
+																	function (err, data) {
+																		if (err) {console.log(err);} else {
+																			// landing.push(data.posts[0].photos[0].alt_sizes[0].url);
+																		}
+																		var images = [];
+																		images.lovers = lovers;
+																		images.fashion = fashion;
+																		images.everyday = everyday;
+																		images.mpr = mpr;
+																		images.gp = globalpost;
+																		images.video = video;
+																		images.travel = travel;
+																		images.landing = landing;
+
+																		console.log(images);
+																		res.render('index', {
+																			title: 'Will Matsuda',
+																			images: images
+																		});
+																	}); //	end landing get 
+															}); //	end travel get
+														
 													});
 
 

@@ -48,6 +48,8 @@ img {
 	margin-right: auto;
 	margin-top: auto;
 	margin-bottom: auto;
+	padding-top: 4%;
+	padding-bottom: 3.5%;
 }
 
 img.landing {
@@ -150,7 +152,8 @@ ul.dropdown-menu {
 	width: 100%;
 	height: 100%;
 	background-size: 100% 100%;
-	background-color: black; /* in case the video doesn't fit the whole page*/
+	/*background-color: black; */
+			/* in case the video doesn't fit the whole page*/
 	/*background-image: url('http://www.youtube.com/embed/M5Gz4zCckkg');*/
 	background-position: center center;
 	background-size: contain;
@@ -170,19 +173,60 @@ ul.dropdown-menu {
     left: 15px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent black transparent transparent;
+    border-color: #321FBF transparent transparent;
 }
 .controlArrow.next {
     right: 15px;
     border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent black;
+    border-color: transparent transparent #321FBF;
 }
 iframe {
 	/*width: 100%;*/
 	height: 100%;
-	width: 100%;
+	width: 90%;
+	/*height: 90%;*/
+	padding-top: 4%;
+	padding-bottom: 3.5%;
 }
 
 .container-fluid {
-	padding-top: 1.3%;
+	/*padding-top: 1.3%;*/
+}
+
+button {
+	background-color: transparent !important;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	border: 1.5px solid #321FBF !important;
+	color: #321FBF;
+	outline: none !important;
+	margin-bottom: 2% !important;
+}
+
+button * {
+	/*color: #321FBF !important;*/
+	font-size: 0.8em !important;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+
+}
+
+.buttton > a.btn-link {
+	font-family: 'Lato', Helvetica, Arial, sans-serif !important;
+}
+
+.secondary {
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+span.icon-bar {
+	background-color: #321FBF;
+	color: #321FBF;
+	border-co
+}
+
+.navbar-toggle {
+	color: #321FBF;
+	/*border: none !important;*/
+	/*background-color: transparent !important;*/
 }
