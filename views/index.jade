@@ -38,7 +38,8 @@ block content
 		.section
 			.content
 				a(href='/')
-					img(src='/images/landing.jpg')
+					each url in images.landing
+						img(src=url)
 			
 		.section(data-anchor='about')
 			.content

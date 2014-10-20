@@ -12,7 +12,7 @@ $(document).ready(function () {
 		loopBottom: false,
 		loopHorizontal: true,
 		menu: '#overlay',
-		resize: false,
+		resize: true,
 		afterLoad: function(anchorLink, index) {
 			for (var i=0; i<pages.length; i++) {
 				var page = pages[i];

@@ -78,7 +78,7 @@ router.get('/', function(req, res) {
 																client.posts('williammatsuda', {type: 'photo', tag: 'landing', limit: 1},
 																	function (err, data) {
 																		if (err) {console.log(err);} else {
-																			// landing.push(data.posts[0].photos[0].alt_sizes[0].url);
+																			landing.push(data.posts[0].photos[0].alt_sizes[0].url);
 																		}
 																		var images = [];
 																		images.lovers = lovers;
