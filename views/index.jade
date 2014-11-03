@@ -59,36 +59,72 @@ block content
 					a.notes.secondary(href='http://wkd.pw' target="_blank") Will Kent-Daggett
 					span.secondary ]
 		.section(data-anchor='mpr')
+			- var i = 0;
 			each url in images.mpr
 				.slide.photoSlide
 					img(src=url)
+					- var caption = images.mpr_captions[i];
+					if (caption)
+						p.img_caption(src= caption)
+					- i++;
+
 		.section(data-anchor='gp')
+			- i = 0;
 			each url in images.gp
 				.slide.photoSlide
 					img(src=url)
+					- caption = images.gp_captions[i];
+					if (caption)
+						p(src= caption)
+					- i++;
 		.section(data-anchor='lovers')
+			- i = 0;
 			each url in images.lovers
 				.slide.photoSlide
 					img(src=url)
+					- caption = images.lovers_captions[i];
+					if (caption)
+						p.img_caption(src= caption)
+					- i++;
 		.section(data-anchor='travel')
+			- i = 0;
 			each url in images.travel
 				.slide.photoSlide
 					img(src=url)
+					- caption = images.travel_captions[i];
+					if (caption)
+						p.img_caption(src= caption)
+					- i++;
 		.section(data-anchor='fashion')
+			- i = 0;
 			each url in images.fashion
 				.slide.photoSlide
 					img(src=url)
+					- caption = images.fashion_captions[i];
+					if (caption)
+						p.img_caption(src= caption)
+					- i++;
 		.section(data-anchor='everyday')
+			- i = 0;
 			each url in images.everyday
 				.slide.photoSlide
 					img(src=url)
+					- caption = images.everyday_captions[i];
+					if (caption)
+						p.img_caption(src= caption)
+					- i++;
 		.section(data-anchor='video')
+			- i = 0;
 			each url in images.video
 				.slide.photoSlide
-					- var bg = 'background-image:' + url;
+					- var bg = 'background-image: ' + url;
 					//- video.vid(autoplay="autoplay" controls="controls")
 					//- 	source(src='//www.youtube.com/embed/M5Gz4zCckkg' type="video/mp4")
 					iframe(src=url, frameborder='0', allowfullscreen='allowfullscreen')
+					- caption = images.video_captions[i];
+					if (caption)
+						p.img_caption(src= caption)
+
 
 
 			

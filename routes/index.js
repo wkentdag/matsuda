@@ -15,7 +15,14 @@ router.get('/', function(req, res) {
 	var travel = [];
 	var landing = [];
 
+	var lovers_captions = [];
+	var fashion_captions = [];
+	var everyday_captions = [];
+	var video_captions = [];
+	var mpr_captions = [];
 	var globalpost_captions = [];
+	var travel_captions = [];
+	var landing_captions = [];
 
 	client.posts('williammatsuda', {type: 'photo', tag: 'lovers', limit: 10}, function (err, data) {
 		if (err) {console.log(err);} else {
@@ -53,18 +60,18 @@ router.get('/', function(req, res) {
 											if (err) {console.log(err);} else {
 												for (var p in data.posts) {
 													globalpost.push(data.posts[p].photos[0].alt_sizes[0].url);
-													var raw = data.posts[p].caption;
-													var caption = raw.replace(/(<([^>]+)>)/ig,"");
+													// var raw = data.posts[p].caption;
+													var caption = data.posts[p].caption.replace(/(<([^>]+)>)/ig,"");
 
-													console.log("=========");
-													console.log("raw", raw);
-													console.log("caption", caption);
-													console.log("pic", data.posts[p].photos[0].alt_sizes[0].url);
-													globalpost_captions.push(data.posts[p].caption);
+													// console.log("=========");
+													// console.log("raw", raw);
+													// console.log("caption", caption);
+													// console.log("pic", data.posts[p].photos[0].alt_sizes[0].url);
+													globalpost_captions.push(caption);
 												}
-												console.log(data);
-												console.log('gp: ');
-												console.log(globalpost);
+												// console.log(data);
+												// console.log('gp: ');
+												// console.log(globalpost);
 
 												client.posts('williammatsuda', {type: 'video', tag: 'video', limit: 10},
 													function (err, data) {
@@ -105,6 +112,17 @@ router.get('/', function(req, res) {
 																		images.travel = travel;
 																		images.landing = landing;
 
+																		images.lovers_captions = lovers_captions;
+																		images.fashion_captions = fashion_captions;
+																		images.everyday_captions = everyday_captions;
+																		images.mpr_captions = mpr_captions;
+																		images.gp_captions = globalpost_captions;
+																		images.video_captions = video_captions;
+																		images.travel_captions = travel_captions;
+																		images.landing_captions = landing_captions;
+
+																		console.log(images.gp);
+																		console.log(images.gp_captions);
 																		// console.log(images);
 																		res.render('index', {
 																			title: 'Will Matsuda',
