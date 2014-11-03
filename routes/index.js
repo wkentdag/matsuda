@@ -15,6 +15,8 @@ router.get('/', function(req, res) {
 	var travel = [];
 	var landing = [];
 
+	var globalpost_captions = [];
+
 	client.posts('williammatsuda', {type: 'photo', tag: 'lovers', limit: 10}, function (err, data) {
 		if (err) {console.log(err);} else {
 			for (var p in data.posts) {
@@ -51,17 +53,28 @@ router.get('/', function(req, res) {
 											if (err) {console.log(err);} else {
 												for (var p in data.posts) {
 													globalpost.push(data.posts[p].photos[0].alt_sizes[0].url);
+													var raw = data.posts[p].caption;
+													var caption = raw.replace(/(<([^>]+)>)/ig,"");
+
+													console.log("=========");
+													console.log("raw", raw);
+													console.log("caption", caption);
+													console.log("pic", data.posts[p].photos[0].alt_sizes[0].url);
+													globalpost_captions.push(data.posts[p].caption);
 												}
+												console.log(data);
+												console.log('gp: ');
+												console.log(globalpost);
 
 												client.posts('williammatsuda', {type: 'video', tag: 'video', limit: 10},
 													function (err, data) {
 														if (err) {console.log(err);} else {
 															for (var p in data.posts) {
 																var raw = data.posts[p].permalink_url;
-																console.log(raw);
+																// console.log(raw);
 																var split = raw.split("?v=");
 																var embed = '//www.youtube.com/embed/' + split[1];
-																console.log(embed);
+																// console.log(embed);
 																video.push(embed);
 															}
 															// console.log(JSON.stringify(data));
@@ -74,6 +87,8 @@ router.get('/', function(req, res) {
 																		travel.push(data.posts[p].photos[0].alt_sizes[0].url);
 																	}
 																}
+
+																// console.log(data);
 
 																client.posts('williammatsuda', {type: 'photo', tag: 'landing', limit: 1},
 																	function (err, data) {
@@ -90,7 +105,7 @@ router.get('/', function(req, res) {
 																		images.travel = travel;
 																		images.landing = landing;
 
-																		console.log(images);
+																		// console.log(images);
 																		res.render('index', {
 																			title: 'Will Matsuda',
 																			images: images
