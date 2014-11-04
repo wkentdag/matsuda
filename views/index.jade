@@ -65,7 +65,7 @@ block content
 					img(src=url)
 					- var caption = images.mpr_captions[i];
 					if (caption)
-						p.img_caption(src= caption)
+						p.img_caption= caption
 					- i++;
 
 		.section(data-anchor='gp')
@@ -75,7 +75,7 @@ block content
 					img(src=url)
 					- caption = images.gp_captions[i];
 					if (caption)
-						p(src= caption)
+						p.img_caption= caption
 					- i++;
 		.section(data-anchor='lovers')
 			- i = 0;
@@ -84,7 +84,7 @@ block content
 					img(src=url)
 					- caption = images.lovers_captions[i];
 					if (caption)
-						p.img_caption(src= caption)
+						p.img_caption= caption
 					- i++;
 		.section(data-anchor='travel')
 			- i = 0;
@@ -93,7 +93,7 @@ block content
 					img(src=url)
 					- caption = images.travel_captions[i];
 					if (caption)
-						p.img_caption(src= caption)
+						p.img_caption= caption
 					- i++;
 		.section(data-anchor='fashion')
 			- i = 0;
@@ -102,7 +102,7 @@ block content
 					img(src=url)
 					- caption = images.fashion_captions[i];
 					if (caption)
-						p.img_caption(src= caption)
+						p.img_caption= caption
 					- i++;
 		.section(data-anchor='everyday')
 			- i = 0;
@@ -111,7 +111,7 @@ block content
 					img(src=url)
 					- caption = images.everyday_captions[i];
 					if (caption)
-						p.img_caption(src= caption)
+						p.img_caption= caption
 					- i++;
 		.section(data-anchor='video')
 			- i = 0;
@@ -123,7 +123,7 @@ block content
 					iframe(src=url, frameborder='0', allowfullscreen='allowfullscreen')
 					- caption = images.video_captions[i];
 					if (caption)
-						p.img_caption(src= caption)
+						p.img_caption= caption
 
 
 
