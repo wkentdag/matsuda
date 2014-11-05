@@ -30,6 +30,8 @@ router.get('/', function(req, res) {
 				// console.log(p);
 				// console.log(data.posts[p].photos[0].alt_sizes[0].url);
 				lovers.push(data.posts[p].photos[0].alt_sizes[0].url);
+				var caption = data.posts[p].caption.replace(/(<([^>]+)>)/ig,"");
+				lovers_captions.push(caption);
 			}
 			// console.log('lovers: ====');
 			// console.log(lovers);
@@ -37,6 +39,8 @@ router.get('/', function(req, res) {
 				if (err) {console.log(err);} else {
 					for (var p in data.posts) {
 						fashion.push(data.posts[p].photos[0].alt_sizes[0].url);
+						var caption = data.posts[p].caption.replace(/(<([^>]+)>)/ig,"");
+						fashion_captions.push(caption);
 					}
 					// console.log('fashion: ============');
 					// console.log(fashion);
@@ -44,6 +48,8 @@ router.get('/', function(req, res) {
 						if (err) {console.log(err);} else {
 							for (var p in data.posts) {
 								everyday.push(data.posts[p].photos[0].alt_sizes[0].url);
+								var caption = data.posts[p].caption.replace(/(<([^>]+)>)/ig,"");
+								everyday_captions.push(caption);
 							}
 							// console.log('everyday1111111');
 							// console.log(everyday);
@@ -52,6 +58,9 @@ router.get('/', function(req, res) {
 								if (err) {console.log(err);} else {
 									for (var p in data.posts) {
 										mpr.push(data.posts[p].photos[0].alt_sizes[0].url);
+
+										var caption = data.posts[p].caption.replace(/(<([^>]+)>)/ig,"");
+										mpr_captions.push(caption);
 									}
 									// console.log('mpr: ');
 									// console.log(mpr);
