@@ -24,6 +24,10 @@
 	text-align: center;
 }
 
+.navbar-header {
+	padding-left: 4% !important;
+}
+
 p.img_caption {
 	position: relative;
 	font-style: italic;
@@ -37,8 +41,10 @@ p.img_caption {
 	text-align: left;
 	float: left;
 	width: 20%;
-	margin-top: auto;
-	margin-bottom: auto;
+	/*margin-top: auto;*/
+	/*margin-bottom: auto;*/
+	margin-top: 3%;
+	padding: 1%;
 }
 
 .container {
@@ -52,6 +58,21 @@ img {
 	position: relative;
 	max-width: 80%;
 	max-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	/*float: left;*/
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: 4%;
+	padding-bottom: 3.5%;
+	/*padding-left: 6%;*/
+}
+
+img.hasCaption {
+	display: block;
+	position: relative;
+	max-width: 80%;
+	max-height: 100%;
 	/*margin-left: auto;*/
 	/*margin-right: auto;*/
 	float: left;
@@ -59,7 +80,7 @@ img {
 	margin-bottom: auto;
 	padding-top: 4%;
 	padding-bottom: 3.5%;
-	padding-left: 4%;
+	padding-left: 6%;
 }
 
 /*p.img_caption {

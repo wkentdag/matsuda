@@ -62,56 +62,74 @@ block content
 			- var i = 0;
 			each url in images.mpr
 				.slide.photoSlide
-					img(src=url)
+					//- img(src=url)
 					- var caption = images.mpr_captions[i];
 					if (caption)
+						img.hasCaption(src=url)
 						p.img_caption= caption
+					else
+						img(src=url)
 					- i++;
 
 		.section(data-anchor='gp')
 			- i = 0;
 			each url in images.gp
 				.slide.photoSlide
-					img(src=url)
+					//- img(src=url)
 					- caption = images.gp_captions[i];
 					if (caption)
+						img.hasCaption(src=url)
 						p.img_caption= caption
+					else
+						img(src=url)
 					- i++;
 		.section(data-anchor='lovers')
 			- i = 0;
 			each url in images.lovers
 				.slide.photoSlide
-					img(src=url)
+					//- img(src=url)
 					- caption = images.lovers_captions[i];
 					if (caption)
+						img.hasCaption(src=url)
 						p.img_caption= caption
+					else
+						img(src=url)
 					- i++;
 		.section(data-anchor='travel')
 			- i = 0;
 			each url in images.travel
 				.slide.photoSlide
-					img(src=url)
+					//- img(src=url)
 					- caption = images.travel_captions[i];
 					if (caption)
+						img.hasCaption(src=url)
 						p.img_caption= caption
+					else
+						img(src=url)
 					- i++;
 		.section(data-anchor='fashion')
 			- i = 0;
 			each url in images.fashion
 				.slide.photoSlide
-					img(src=url)
+					//- img(src=url)
 					- caption = images.fashion_captions[i];
 					if (caption)
+						img.hasCaption(src=url)
 						p.img_caption= caption
+					else
+						img(src=url)
 					- i++;
 		.section(data-anchor='everyday')
 			- i = 0;
 			each url in images.everyday
 				.slide.photoSlide
-					img(src=url)
+					//- img(src=url)
 					- caption = images.everyday_captions[i];
 					if (caption)
+						img.hasCaption(src=url)
 						p.img_caption= caption
+					else
+						img(src=url)
 					- i++;
 		.section(data-anchor='video')
 			- i = 0;
