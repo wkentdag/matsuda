@@ -171,6 +171,12 @@ ul.dropdown-menu {
 	box-shadow: none !important;
 }
 
+ul.published {
+	list-style-type: none !important;
+	padding: 0;
+	font-size: 1.2em;
+}
+
 * {
 	font-family: 'Volkorn', Georgia, Serif;
 	color: black;
