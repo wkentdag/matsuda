@@ -1,39 +1,41 @@
 extends layout
 
 block content
-	nav.navbar-default.navbar-fixed-top#overlay(role='navigation')
-		.container-fluid
-			.navbar-header
-				button(type='button' data-toggle='collapse' data-target='#nav-example').navbar-toggle.collapsed
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				p.navbar-brand
-					a#home.nav-link(href='/')=title
-			.collapse.navbar-collapse#nav-example
-				ul.nav.navbar-nav
-					li
-						a.nav-link(href='#about' data-menuanchor='about') about
-					li.dropdown
-						a.nav-link.dropdown-toggle(data-toggle='dropdown') news 
-							span.caret
-						ul.dropdown-menu(role='menu')
-							li
-								a.nav-link(href='#mpr' data-menuanchor='mpr') minnesota public radio
-							li
-								a.nav-link(href='#gp' data-menuanchor='gp') the global post
+	//- nav.navbar-default.navbar-fixed-top#overlay(role='navigation')
+	//- 	.container-fluid
+	//- 		.navbar-header
+	//- 			button(type='button' data-toggle='collapse' data-target='#nav-example').navbar-toggle.collapsed
+	//- 				span.sr-only Toggle navigation
+	//- 				span.icon-bar
+	//- 				span.icon-bar
+	//- 				span.icon-bar
+	//- 			p.navbar-brand
+	//- 				a#home.nav-link(href='/')=title
+	//- 		.collapse.navbar-collapse#nav-example
+	//- 			ul.nav.navbar-nav
+	//- 				li
+	//- 					a.nav-link(href='#about' data-menuanchor='about') about
+	//- 				li.dropdown
+	//- 					a.nav-link.dropdown-toggle(data-toggle='dropdown') news 
+	//- 						span.caret
+	//- 					ul.dropdown-menu(role='menu')
+	//- 						li
+	//- 							a.nav-link(href='#mpr' data-menuanchor='mpr') minnesota public radio
+	//- 						li
+	//- 							a.nav-link(href='#gp' data-menuanchor='gp') the global post
 						
-					li
-						a.nav-link(href='#lovers' data-menuanchor='lovers') lovers
-					li
-						a.nav-link(href='#travel' data-menuanchor='travel') travel
-					li
-						a.nav-link(href='#fashion' data-menuanchor='fashion') fashion
-					li
-						a.nav-link(href='#everyday' data-menuanchor='everyday') everyday
-					li
-						a.nav-link(href='#video' data-menuanchor='video') video
+	//- 				li
+	//- 					a.nav-link(href='#lovers' data-menuanchor='lovers') lovers
+	//- 				li
+	//- 					a.nav-link(href='#travel' data-menuanchor='travel') travel
+	//- 				li
+	//- 					a.nav-link(href='#fashion' data-menuanchor='fashion') fashion
+	//- 				li
+	//- 					a.nav-link(href='#everyday' data-menuanchor='everyday') everyday
+	//- 				li
+	//- 					a.nav-link(href='#video' data-menuanchor='video') video
+	#overlay
+		p hello world
 	.fullpage
 		.section
 			.content
