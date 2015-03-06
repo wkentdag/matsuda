@@ -1,0 +1,17 @@
+{
+    "tags": {
+    	"lovers" : "lovers",
+    	"fashion" : "fashion",
+    	"everyday" : "everyday",
+    	"video" : "video",
+    	"mpr" : "Minnesota Public Radio",
+    	"globalPost" : "The Global Post",
+    	"travel": "travel",
+    	"landing": "landing",
+    	"ir": "International Relations",
+    	"riceFork": "Now I Eat Rice With A Fork"
+    },
+    "nav-groups": {
+    	"news": ["mpr", "globalPost"]
+    }
+}

@@ -1,37 +1,7 @@
-- var desc = 'Will Matsuda is a photographer from Portland, Oregon, currently working in Saint Paul, Minnesota. Check out his current work here.'
-- var wm = 'William Matsuda'
-- var img = 'http://www.williammatsuda.com/favicon-lg.ico'
-
 doctype html
 html
-	head
-		title= title
-		//- meta(name='description' content= desc)
-		//- meta(name='keywords' content='Will Matsuda, William Matsuda, Will, William, Matsuda, will matsuda, matsuda, photographer, photography, wedding, wedding photography, fashion, fashion photography, news, news photogrpahy, wedding photographer, fashion photographer, news photographer, photojournalist, reporter, St. Paul, Saint Paul, st paul, saint paul, mn, minnesota, Minnesota, Minneapolis, minneapolis, mpls')
-		//- meta(name='author' content= wm)
-		//- meta(property='og:title' content= wm)
-		//- meta(property='og:description' content= desc)
-		//- meta(property='og:url' content='http://www.williammatsuda.com')
-		//- meta(property='og:type' content='photo')
-		//- meta(property='og:img' content= img)
-		//- meta(property='og:site_name' content= wm)
-		//- meta(name='twitter:card' content= desc)
-		//- meta(name='twitter:title' content= wm)
-		//- meta(name='twitter:description' content= desc)
-		//- meta(name='twitter:img' content= img)
-
-		link(rel="shortcut icon" href="http://williammatsuda.com/images/favicon.ico?v=2")
-		link(href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet')
-		link(href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css')
-		link(rel='stylesheet', href='/javascripts/bower_components/bootstrap/dist/css/bootstrap.css')
-		link(rel='stylesheet', href='/javascripts/bower_components/fullpage.js/jquery.fullPage.css')
-		link(rel='stylesheet', href='stylesheets/custom.css')
-
-	body
-		block content
-		script(src='javascripts/bower_components/jQuery/dist/jquery.min.js')
-		script(src='javascripts/bower_components/fullpage.js/jquery.fullPage.min.js')
-		script(src='javascripts/bower_components/fullpage.js/vendors/jquery.easings.min.js')
-		script(src='javascripts/bower_components/bootstrap/dist/js/bootstrap.min.js')
-		script(src='javascripts/index.js')
-		script(src='javascripts/ga.js')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
