@@ -35,7 +35,35 @@ block content
 	//- 				li
 	//- 					a.nav-link(href='#video' data-menuanchor='video') video
 	#overlay
-		p hello world
+		a#home.nav-link(href='/')=title
+		ul
+			li.dropdown
+				a.nav-link.dropdown-toggle(data-toggle='dropdown') news 
+					span.caret
+				ul.dropdown-menu(role='menu')
+					li
+						a.nav-link(href='#mpr' data-menuanchor='mpr') minnesota public radio
+					li
+						a.nav-link(href='#gp' data-menuanchor='gp') the global post
+			li
+				a.nav-link(href='#lovers' data-menuanchor='lovers') lovers
+			li
+				a.nav-link(href='#travel' data-menuanchor='travel') travel
+			li
+				a.nav-link(href='#fashion' data-menuanchor='fashion') fashion
+			li
+				a.nav-link(href='#everyday' data-menuanchor='everyday') everyday
+			li
+				a.nav-link(href='#video' data-menuanchor='video') video
+
+	#controls
+		.controls
+			span.glyphicon.glyphicon-chevron-left
+		.control
+			span.glyphicon.glyphicon-chevron-right
+		.control
+			span.glyphicon.glyphicon-resize-full
+
 	.fullpage
 		.section
 			.content
@@ -71,77 +99,65 @@ block content
 					span.secondary ]
 		.section(data-anchor='mpr')
 			- var i = 0;
-			each url in images.mpr
-				.slide.photoSlide
-					//- img(src=url)
-					- var caption = images.mpr_captions[i];
-					if (caption)
-						img.hasCaption(src=url)
-						p.img_caption= caption
-					else
+			.slideContainer
+				each url in images.mpr
+					.slide
+						- var caption = images.mpr_captions[i];
 						img(src=url)
-					- i++;
+						if (caption)
+							p.img_caption= caption
+						- i++;
 
 		.section(data-anchor='gp')
-			- i = 0;
-			each url in images.gp
-				.slide.photoSlide
-					//- img(src=url)
-					- caption = images.gp_captions[i];
-					if (caption)
-						img.hasCaption(src=url)
-						p.img_caption= caption
-					else
+			- var i = 0;
+			.slideContainer
+				each url in images.gp
+					.slide
+						- var caption = images.gp_captions[i];
 						img(src=url)
-					- i++;
+						if (caption)
+							p.img_caption= caption
+						- i++;
 		.section(data-anchor='lovers')
-			- i = 0;
-			each url in images.lovers
-				.slide.photoSlide
-					//- img(src=url)
-					- caption = images.lovers_captions[i];
-					if (caption)
-						img.hasCaption(src=url)
-						p.img_caption= caption
-					else
+			- var i = 0;
+			.slideContainer
+				each url in images.lovers
+					.slide
+						- var caption = images.lovers_captions[i];
 						img(src=url)
-					- i++;
+						if (caption)
+							p.img_caption= caption
+						- i++;
 		.section(data-anchor='travel')
-			- i = 0;
-			each url in images.travel
-				.slide.photoSlide
-					//- img(src=url)
-					- caption = images.travel_captions[i];
-					if (caption)
-						img.hasCaption(src=url)
-						p.img_caption= caption
-					else
+			- var i = 0;
+			.slideContainer
+				each url in images.travel
+					.slide
+						- var caption = images.travel_captions[i];
 						img(src=url)
-					- i++;
+						if (caption)
+							p.img_caption= caption
+						- i++;
 		.section(data-anchor='fashion')
-			- i = 0;
-			each url in images.fashion
-				.slide.photoSlide
-					//- img(src=url)
-					- caption = images.fashion_captions[i];
-					if (caption)
-						img.hasCaption(src=url)
-						p.img_caption= caption
-					else
+			- var i = 0;
+			.slideContainer
+				each url in images.fashion
+					.slide
+						- var caption = images.fashion_captions[i];
 						img(src=url)
-					- i++;
+						if (caption)
+							p.img_caption= caption
+						- i++;
 		.section(data-anchor='everyday')
-			- i = 0;
-			each url in images.everyday
-				.slide.photoSlide
-					//- img(src=url)
-					- caption = images.everyday_captions[i];
-					if (caption)
-						img.hasCaption(src=url)
-						p.img_caption= caption
-					else
+			- var i = 0;
+			.slideContainer
+				each url in images.everyday
+					.slide
+						- var caption = images.everyday_captions[i];
 						img(src=url)
-					- i++;
+						if (caption)
+							p.img_caption= caption
+						- i++;
 		.section(data-anchor='video')
 			- i = 0;
 			each url in images.video

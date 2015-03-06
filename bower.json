@@ -19,7 +19,8 @@
     "fullpage.js": null,
     "bootstrap": null,
     "fixie": "https://github.com/ryhan/fixie.git",
-    "jquery": "*"
+    "jquery": "*",
+    "screenfull": "~2.0.0"
   },
   "devDependencies": {
     "fixie": "https://github.com/ryhan/fixie.git"

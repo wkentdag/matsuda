@@ -8,6 +8,7 @@ $(document).ready(function () {
  //    }());
 
 	$('#fullpage').fullpage({
+		controlArrows: false,
 		anchors: pages,
 		loopBottom: false,
 		loopHorizontal: true,
