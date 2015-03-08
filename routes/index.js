@@ -5,38 +5,64 @@ var fs = require('fs');
 var tumblr = require('tumblr.js');
 var client = require('../tumblr-auth.js')
 var forEachAsync = require('forEachAsync').forEachAsync;
-var async = require('async');
 
 /* GET home page. */
 router.get('/', function(req, res) {
 
 	var categories = JSON.parse(fs.readFileSync('public/files/categories.json', 'utf8'));
-	var tags = categories.tags;
-	
-	for (item in tags) {
-		console.log(tags[item].tag);
-	}
+	var rawTags = categories.tags;
+	var media = [];
 
-	// forEachAsync(categories.tags, function (next, cat, i, arr) {
-	// 	console.log('hi');
-	// 	next();
-	// }).then(function () {	
-	// 	console.log('all done!')
-		client.getPosts('lovers', 'photo', 10, function(err, posts) {
-			// console.log(posts);
+	forEachAsync(rawTags, function (next, obj, i, arr) {
 
-			res.render('index', {title: 'William Matsuda', docs: posts});
-		});
-	// });
+		if (obj.type === 'video') {
+			client.getVideos(obj.tag, obj.limit, function (err, posts) {
+				// console.log(obj.tag, ':\n', posts);
+				media.push(posts);
+				next();
+			});
+		} else {
+			client.getPhotos(obj.tag, obj.limit, function (err, posts) {
+				// console.log(obj.tag, ':\n', posts);
+				media.push(posts);
+				next();
+			});
+		};
+
+	}).then( function () {
+		console.log('all done!\n', media);
+		res.render('index', {title: 'William Matsuda', docs: media});
+	});
 });
 
 
-client.getPosts = function(tag, type, limit, cb) {
-	client.posts('williammatsuda', {type: type, tag: tag, limit: limit}, function(err, docs) {
+client.getPhotos = function(tag, limit, cb) {
+	client.posts('williammatsuda', {type: 'photo', tag: tag, limit: limit}, function(err, docs) {
 		if (err) {
 			cb(err);
 		} else {
-			cb(null, docs);
+			var posts = [];
+			for (p in docs.posts) {
+				posts.push(docs.posts[p].photos[0].alt_sizes[1].url);
+			}
+			cb(null, posts);
+		}
+	});
+}
+
+client.getVideos = function(tag, limit, cb) {
+	client.posts('williammatsuda', {type: 'video', tag: tag, limit: limit}, function(err, docs) {
+		if (err) {
+			cb(err);
+		} else {
+			var posts = [];
+			for (p in docs.posts) {
+				var rawUrl = docs.posts[p].permalink_url;
+				var split = rawUrl.split("?v=");
+				var embedUrl = '//www.youtube.com/embed/' + split[1];
+				posts.push(embedUrl);
+			}
+			cb(null, posts);
 		}
 	});
 }
