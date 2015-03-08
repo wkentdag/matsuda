@@ -1,17 +1,67 @@
 {
-    "tags": {
-    	"lovers" : "lovers",
-    	"fashion" : "fashion",
-    	"everyday" : "everyday",
-    	"video" : "video",
-    	"mpr" : "Minnesota Public Radio",
-    	"globalPost" : "The Global Post",
-    	"travel": "travel",
-    	"landing": "landing",
-    	"ir": "International Relations",
-    	"riceFork": "Now I Eat Rice With A Fork"
-    },
-    "nav-groups": {
-    	"news": ["mpr", "globalPost"]
-    }
+    "tags": [
+        {
+            "tag" : "Lovers",
+            "type" : "photo",
+            "limit": 10,
+            "id": "lovers"
+        },
+        {
+            "tag" : "Fashion",
+            "type" : "photo",
+            "limit": 10,
+            "id": "fashion"
+
+        },
+        {
+            "tag": "Everyday",
+            "type": "photo",
+            "limit": 10,
+            "id": "everyday"
+        },
+        {
+            "tag" : "video",
+            "type" : "video",
+            "limit": 10,
+            "id": "video"
+        },
+        {
+            "tag": "Minnesota Public Radio",
+            "type" : "photo",
+            "limit": 10,
+            "id": "mpr",
+            "nav-group": "news"
+        },
+        {
+            "tag" :"The Global Post",
+            "type" : "photo",
+            "limit": 10,
+            "id": "globalPost",
+            "nav-group": "news"
+        },
+        {
+            "tag" : "travel",
+            "type" : "photo",
+            "limit": 10,
+            "id": "travel"
+        },
+        {
+            "tag" : "landing",
+            "type": "photo",
+            "limit": 1,
+            "id": "landing"
+        },
+        {
+            "tag" : "International Relations",
+            "type" : "photo",
+            "limit" : 10,
+            "id" : "intlRel"
+        },
+        {
+            "tag" : "Now I Eat Rice With A Fork",
+            "type": "photo",
+            "limit": 10,
+            "id" : "riceFork"
+        }
+    ]
 }
