@@ -11,20 +11,43 @@ router.get('/', function(req, res) {
 
 	var categories = JSON.parse(fs.readFileSync('public/files/categories.json', 'utf8'));
 	var rawTags = categories.tags;
-	var media = [];
+	var media = {};
 
 	forEachAsync(rawTags, function (next, obj, i, arr) {
 
 		if (obj.type === 'video') {
 			client.getVideos(obj.tag, obj.limit, function (err, posts) {
-				// console.log(obj.tag, ':\n', posts);
-				media.push(posts);
+
+				if ( obj.hasOwnProperty('navGroup') ) {
+					media[obj.navGroup] = {};
+					var tag = obj.tag;
+					media[obj.navGroup.tag] = posts;
+				} else {
+					media[obj.tag] = posts;
+				};
+
 				next();
 			});
 		} else {
 			client.getPhotos(obj.tag, obj.limit, function (err, posts) {
-				// console.log(obj.tag, ':\n', posts);
-				media.push(posts);
+
+				if ( obj.hasOwnProperty('navGroup') ) {
+					//	if true, the 'posts' object belongs within a navbar sub-category
+					var navGroup = obj.navGroup;
+					var tag = obj.tag;
+
+					if ( !(media.hasOwnProperty(navGroup)) ) {
+						//	instantiate the master nav category if it doesn't already exist
+						media[navGroup] = {};
+					}
+
+					var masterCat = media[navGroup];
+					masterCat[tag] = posts;
+
+				} else {
+					media[obj.tag] = posts;
+				};
+
 				next();
 			});
 		};

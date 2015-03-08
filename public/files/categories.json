@@ -30,14 +30,14 @@
             "type" : "photo",
             "limit": 10,
             "id": "mpr",
-            "nav-group": "news"
+            "navGroup": "news"
         },
         {
             "tag" :"The Global Post",
             "type" : "photo",
             "limit": 10,
             "id": "globalPost",
-            "nav-group": "news"
+            "navGroup": "news"
         },
         {
             "tag" : "travel",
