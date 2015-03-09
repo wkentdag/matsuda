@@ -45,6 +45,6 @@ $(document).ready(function () {
 	$.fn.fullpage.setScrollingSpeed(500);	
 });
 
-var pages = ['#', 'about', 'mpr', 'gp', 'lovers', 'travel', 'fashion', 'everyday', 'video'];
+var pages = ['#', 'about', 'mpr', 'gp', 'intlRel', 'riceFork', 'lovers', 'travel', 'fashion', 'everyday', 'video'];
 
 var currentPage;
