@@ -10,19 +10,28 @@ var forEachAsync = require('forEachAsync').forEachAsync;
 router.get('/', function(req, res) {
 
 	var categories = JSON.parse(fs.readFileSync('public/files/categories.json', 'utf8'));
-	var rawTags = categories.tags;
 	var media = {};
 
-	forEachAsync(rawTags, function (next, obj, i, arr) {
+	forEachAsync(categories.tags, function (next, obj, i, arr) {
 
 		if (obj.type === 'video') {
 			client.getVideos(obj.tag, obj.limit, function (err, posts) {
 
 				if ( obj.hasOwnProperty('navGroup') ) {
-					media[obj.navGroup] = {};
+					//	if true, the 'posts' object belongs within a navbar sub-category
+					var navGroup = obj.navGroup;
 					var tag = obj.tag;
-					media[obj.navGroup.tag] = posts;
+
+					if ( !(media.hasOwnProperty(navGroup)) ) {
+						//	instantiate the master nav category if it doesn't already exist
+						media[navGroup] = {};
+					}
+
+					var masterCat = media[navGroup];
+					masterCat[tag] = posts;
+
 				} else {
+					//	if false, the 'posts' object belongs to its own nav category, and can be directly assigned
 					media[obj.tag] = posts;
 				};
 
@@ -45,6 +54,7 @@ router.get('/', function(req, res) {
 					masterCat[tag] = posts;
 
 				} else {
+					//	if false, the 'posts' object belongs to its own nav category, and can be directly assigned
 					media[obj.tag] = posts;
 				};
 
@@ -54,7 +64,7 @@ router.get('/', function(req, res) {
 
 	}).then( function () {
 		console.log('all done!\n', media);
-		res.render('index', {title: 'William Matsuda', docs: media});
+		res.render('index', {title: 'William Matsuda', data: media});
 	});
 });
 
