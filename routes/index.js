@@ -14,6 +14,8 @@ router.get('/', function(req, res) {
 	var globalpost = [];
 	var travel = [];
 	var landing = [];
+	var intlRel = [];
+	var riceFork = [];
 
 	var lovers_captions = [];
 	var fashion_captions = [];
@@ -23,6 +25,8 @@ router.get('/', function(req, res) {
 	var globalpost_captions = [];
 	var travel_captions = [];
 	var landing_captions = [];
+	var intlRel_captions = [];
+	var riceFork_captions = [];
 
 	client.posts('williammatsuda', {type: 'photo', tag: 'lovers', limit: 10}, function (err, data) {
 		if (err) {console.log(err);} else {
@@ -111,32 +115,60 @@ router.get('/', function(req, res) {
 																		if (err) {console.log(err);} else {
 																			landing.push(data.posts[0].photos[0].alt_sizes[0].url);
 																		}
-																		var images = [];
-																		images.lovers = lovers;
-																		images.fashion = fashion;
-																		images.everyday = everyday;
-																		images.mpr = mpr;
-																		images.gp = globalpost;
-																		images.video = video;
-																		images.travel = travel;
-																		images.landing = landing;
 
-																		images.lovers_captions = lovers_captions;
-																		images.fashion_captions = fashion_captions;
-																		images.everyday_captions = everyday_captions;
-																		images.mpr_captions = mpr_captions;
-																		images.gp_captions = globalpost_captions;
-																		images.video_captions = video_captions;
-																		images.travel_captions = travel_captions;
-																		images.landing_captions = landing_captions;
+																		client.posts('williammatsuda', {type: 'photo', tags: 'International Relations', limit: 10},
+																			function (err, data) {
+																				for (var p in data.posts) {
+																					intlRel.push(data.posts[p].photos[0].alt_sizes[0].url);
+																					var caption = data.posts[p].caption.replace(/(<([^>]+)>)/ig,"");
+																					intlRel_captions.push(caption);
+																					// console.log(intlRel, intlRel_captions);
+																				}
 
-																		console.log(images.gp);
-																		console.log(images.gp_captions);
-																		// console.log(images);
-																		res.render('index', {
-																			title: 'Will Matsuda',
-																			images: images
-																		});
+																				client.posts('williammatsuda', {type: 'photo', tags: 'Now I Eat Rice With A Fork', limit: 10},
+																					function (err, data) {
+																						for (var p in data.posts) {
+																							riceFork.push(data.posts[p].photos[0].alt_sizes[0].url);
+																							var caption = data.posts[p].caption.replace(/(<([^>]+)>)/ig,"");
+																							riceFork_captions.push(caption);
+																							console.log(riceFork, riceFork_captions);
+																						}
+																						var images = [];
+																						images.lovers = lovers;
+																						images.fashion = fashion;
+																						images.everyday = everyday;
+																						images.mpr = mpr;
+																						images.gp = globalpost;
+																						images.video = video;
+																						images.travel = travel;
+																						images.landing = landing;
+																						images.intlRel = intlRel;
+																						images.riceFork = riceFork;
+
+																						images.lovers_captions = lovers_captions;
+																						images.fashion_captions = fashion_captions;
+																						images.everyday_captions = everyday_captions;
+																						images.mpr_captions = mpr_captions;
+																						images.gp_captions = globalpost_captions;
+																						images.video_captions = video_captions;
+																						images.travel_captions = travel_captions;
+																						images.landing_captions = landing_captions;
+																						images.intlRel_captions = intlRel_captions;
+																						images.riceFork_captions = riceFork_captions;
+
+																						// console.log(images.intlRel);
+																						// console.log(images.intlRel_captions);
+																						// console.log(images.riceFork);
+																						// console.log(images.riceFork_captions);
+																						// console.log(images);
+																						res.render('index', {
+																							title: 'Will Matsuda',
+																							images: images
+																						});
+																					});	//	end ricefork get
+																				
+																			});	//	end intlrel get
+																		
 																	}); //	end landing get 
 															}); //	end travel get
 														
