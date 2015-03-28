@@ -76,7 +76,9 @@ client.getPhotos = function(tag, limit, cb) {
 		} else {
 			var posts = [];
 			for (p in docs.posts) {
-				posts.push(docs.posts[p].photos[0].alt_sizes[1].url);
+				var sizes = docs.posts[p].photos[0].alt_sizes;
+				// posts.push(docs.posts[p].photos[0].alt_sizes[1].url);
+				posts.push( [sizes[0].url, sizes[1].url, sizes[2].url] );
 			}
 			cb(null, posts);
 		}
