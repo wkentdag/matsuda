@@ -63,7 +63,7 @@ router.get('/', function(req, res) {
 		};
 
 	}).then( function () {
-		console.log('all done!\n', media);
+		console.log('all done!\n', JSON.stringify(media));
 		res.render('index', {title: 'William Matsuda', data: media});
 	});
 });
@@ -78,7 +78,7 @@ client.getPhotos = function(tag, limit, cb) {
 			for (p in docs.posts) {
 				var sizes = docs.posts[p].photos[0].alt_sizes;
 				// posts.push(docs.posts[p].photos[0].alt_sizes[1].url);
-				posts.push( [sizes[0].url, sizes[1].url, sizes[2].url] );
+				posts.push( [sizes[0].url, sizes[1].url, sizes[2].url ] );
 			}
 			cb(null, posts);
 		}
