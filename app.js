@@ -9,11 +9,17 @@ var routes = require('./routes/index');
 
 var app = express();
 
-//  required for getImages(), client.getPhotos, client.getImages
+//  required for bundleLinks(), client.getPhotos, client.getImages
 var fs = require('fs');
 var tumblr = require('tumblr.js');
 var client = require('./tumblr-auth.js')
 var forEachAsync = require('forEachAsync').forEachAsync;
+
+//  required for download()
+var request = require('request');
+var mkdirp = require('mkdirp');
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
-getImages();
+bundleLinks();
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -61,7 +67,7 @@ app.use(function(err, req, res, next) {
     });
 });
 
-function getImages() {
+function bundleLinks() {
         var categories = JSON.parse(fs.readFileSync('public/files/categories.json', 'utf8'));
     var media = {};
 
@@ -116,8 +122,18 @@ function getImages() {
         };
 
     }).then( function () {
-        console.log('all done!\n');
+        console.log('all done!\n', media);
         return media;
+    });
+}
+
+//  @param uri: uri of image to download
+//  @param filename: name of newly created img file
+//  @param cb: callback 
+//  h/t http://stackoverflow.com/questions/12740659/downloading-images-with-node-js
+var download = function download(uri, filename, cb) {
+    request.head(uri, function(err, res, body) {
+        request(uri).pipe(fs.createWriteStream(filename)).on('close', cb); 
     });
 }
 
@@ -135,6 +151,22 @@ client.getPhotos = function(tag, limit, cb) {
             cb(null, posts);
         }
     });
+
+
+    // client.posts('williammatsuda', {type: 'photo', tag: tag, limit: limit}, function(err, docs) {
+    //     if (err) {
+    //         cb(err);
+    //     } else {
+    //         //  grab each url
+    //         var urls = [];
+    //         for (p in docs.posts) {
+    //             var sizes = docs.posts[p].photos[0].alt_sizes;
+    //             urls.push( [sizes[0].url, sizes[1].url, sizes[2].url ] );
+    //         }
+
+    //         mkdirp()
+    //     }
+    // })
 }
 
 client.getVideos = function(tag, limit, cb) {
@@ -153,6 +185,8 @@ client.getVideos = function(tag, limit, cb) {
         }
     });
 }
+
+
 
 
 module.exports = app;
