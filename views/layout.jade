@@ -1,7 +1,38 @@
+- var desc = 'Will Matsuda is a photographer from Portland, Oregon, currently working in Saint Paul, Minnesota. Check out his current portfolio here.';
+- var wm = 'William Matsuda';
+- var img = 'http://www.williammatsuda.com/favicon.ico';
+
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		meta(name='description' content= desc)
+		meta(name='keywords' content='Will Matsuda, William Matsuda, Matsuda, photographer')
+		meta(name='author' content= wm)
+		meta(property='og:title' content= wm)
+		meta(property='og:description' content= desc)
+		meta(property='og:url' content='http://www.williammatsuda.com')
+		meta(property='og:type' content='photo')
+		meta(property='og:img' content= img)
+		meta(property='og:site_name' content= wm)
+		meta(name='twitter:card' content= desc)
+		meta(name='twitter:title' content= wm)
+		meta(name='twitter:description' content= desc)
+		meta(name='twitter:img' content= img)
+		meta(name='google-site-verification' content='e1Oq-KXhoLWmWMqNJD32W813KjK0Di3dfs2NISo1X08')
+		meta(name="viewport" content="width=device-width" initial-scale="1")
+
+		link(rel="shortcut icon" href="http://williammatsuda.com/images/favicon.ico?v=2")
+		link(href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet')
+		link(href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css')
+
+		link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/bower_components/fullpage.js/jquery.fullPage.css')
+		link(rel='stylesheet', href='/stylesheets/sidebar.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+
+		script(type='text/javascript' src='/bower_components/jquery/dist/jquery.min.js')
+		script(type='text/javascript' src='/bower_components/fullpage.js/jquery.fullPage.min.js')
+	body
+		block content
+		block scripts

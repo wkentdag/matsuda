@@ -1,8 +1,31 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#navbar {
+	z-index: 1000;
+	position: fixed;
+	bottom: 0;
+	height: 50px;
+	background-color: transparent;
+	width: 100%;
+	border: 1px solid black;
 }
 
-a {
-  color: #00B7FF;
+.nav-pane {
+	width: 100%;
+	float: left;
+	margin: 5%;
+}
+
+.nav-cell {
+	width: 100%;
+}
+
+.nav-cell * {
+	width: 250px;
+}
+
+img#landing {
+	width: 100%;
+}
+
+.outline {
+	border: 1px solid red;
 }

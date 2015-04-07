@@ -1,6 +1,44 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p= docs
+	#navbar
+		button.btn.btn-default#menu-toggle
+			span.glyphicon.glyphicon-menu-hamburger
+	#wrapper
+			#sidebar-wrapper
+				h1= title
+
+				.nav-pane
+					.nav-cell
+						p#about= about
+
+				.nav-pane
+					.nav-cell
+						h3 published work:
+						ul.sidebar-nav
+						each p in published
+							li
+								if p.link
+									a(href= p.link)= p.publication
+								else
+									span= p.publication
+
+				.nav-pane
+					.nav-cell
+						h3 galleries:
+						ul.sidebar-nav
+						each cat in categories
+							li
+								a(href='')= cat
+
+			#page-content-wrapper
+				.container-fluid
+					.row
+						.col-md-12.col-lg-9
+							img.fixie#landing   
+						.col-lg-3.col-hidden-md.outline
+block scripts
+	script(type='text/javascript' src='/javascripts/scripts.js')
+	script(type='text/javascript' src='/bower_components/fixie/fixie.min.js')
+
+	
