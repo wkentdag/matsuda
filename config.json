@@ -1,0 +1,5 @@
+{
+  "tagFile": "public/files/tags.json",
+  "imgDir": "public/media/images/",
+  "videoDir": "public/media/video/"
+}
