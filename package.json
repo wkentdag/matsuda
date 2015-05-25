@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "clean": "rimraf public/media/*",
-    "start": "node ./bin/www",
+    "start": "nodemon ./bin/www",
     "prestart": "npm run clean"
   },
   "dependencies": {

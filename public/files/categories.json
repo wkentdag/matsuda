@@ -1,5 +1,37 @@
 {
 	"categories": [
-	"News", "International Relations", "Now I Eat Rice With a Fork", "Lovers",
-	"Travel", "Fashion", "Everyday", "Video"]
+    {
+      "title": "News",
+      "galleries": [
+      "mpr", "gp"]
+    },
+    {
+      "title": "International Relations",
+      "galleries": "intlRel"
+    },
+    {
+      "title": "Now I Eat Rice With a Fork",
+      "galleries": "riceFork"
+    },
+    {
+      "title": "Lovers",
+      "galleries" : "lovers"
+    },
+    {
+      "title": "Travel",
+      "galleries": "travel"
+    },
+    {
+      "title": "Fashion",
+      "galleries": "fashion"
+    },
+    {
+      "title": "Everyday",
+      "galleries": "everyday"
+    },
+    {
+      "title": "Video",
+      "galleries": "video"
+    }
+  ]
 }
