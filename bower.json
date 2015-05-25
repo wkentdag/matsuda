@@ -25,5 +25,8 @@
   },
   "devDependencies": {
     "fixie": "https://github.com/ryhan/fixie.git"
+  },
+  "resolutions": {
+    "jquery": "~2.1.3"
   }
 }
