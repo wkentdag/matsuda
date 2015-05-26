@@ -8,6 +8,7 @@ router.get('/', function(req, res) {
 		title: 'William Matsuda',
 		categories: text.categories,
 		about: text.landing,
+    contact: text.contact,
 		published: text.published
 	});
 });
