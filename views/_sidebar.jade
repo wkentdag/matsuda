@@ -1,8 +1,8 @@
-#navigation
-  .nav-pane
+#navigation.column-container
+  .column-pane
     p= about
-  .nav-pane
-    h3 Published Work:
+  .column-pane
+    h4 Published Work:
     ul
     each i in published
       if (i.link)
@@ -10,8 +10,8 @@
           li= i.publication
       else
         li= i.publication
-  .nav-pane
-    h3 Contact + Inquiries:
+  .column-pane
+    h4 Contact + Inquiries:
     - var mailUrl = "mailto:" + contact.email;
     - var telUrl = "tel:" + contact.phone;
     a(href=mailUrl)
@@ -19,7 +19,8 @@
     a(href=telUrl)
       p=contact.phone
 
-  .nav-pane
+  .column-pane
+    h4 Galleries:
     ul
       each c in categories
         li.nav-item

@@ -1,11 +1,29 @@
 @import 'variables';
 
-#main-header {
-  position: fixed;
-  top: 0;
+.site-wrap {
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  top: $header-padding;
+  bottom: 100%;
   left: 0;
-  border-bottom: 3px solid $black;
+  z-index: 1;
+  padding: 4em;
+  background-size: 200%;
+  background-color: white;
+  border-left: 1px solid $black;
+}
+
+.column-container {
+  width: 25%;
+  max-width: 300px;
+}
+
+.column-pane {
+  width: 90%;
+  margin: auto;
 }
 
 @import 'sidebar';
 @import 'footer';
+@import 'header';
