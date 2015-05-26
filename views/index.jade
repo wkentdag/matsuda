@@ -8,12 +8,12 @@ block content
 		span.glyphicon.glyphicon-menu-hamburger
 
 	.site-wrap
-		h1#main-header= title
-		- var i=0
-		while i < 4
-			p.fixie
-			img.fixie
-			- i++
+		include _header
+		#fullpage
+			each c in categories
+				.section
+					p= c.title
+
 
 block scripts
 	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')
