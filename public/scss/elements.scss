@@ -1,7 +1,11 @@
 @import 'variables';
 
-p, a {
+a {
   color: $blue;
 }
 
-@import 'sidebar';
+p {
+  color: $black;
+}
+
+@import 'classes';

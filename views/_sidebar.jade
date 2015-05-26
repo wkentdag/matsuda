@@ -1,0 +1,27 @@
+#navigation
+  .nav-pane
+    p= about
+  .nav-pane
+    h3 Published Work:
+    ul
+    each i in published
+      if (i.link)
+        a(href=i.link)
+          li= i.publication
+      else
+        li= i.publication
+  .nav-pane
+    h3 Contact + Inquiries:
+    - var mailUrl = "mailto:" + contact.email;
+    - var telUrl = "tel:" + contact.phone;
+    a(href=mailUrl)
+      p= contact.email
+    a(href=telUrl)
+      p=contact.phone
+
+  .nav-pane
+    ul
+      each c in categories
+        li.nav-item
+          - var url = '/#' + c.title;
+          a(href=url)= c.title

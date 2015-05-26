@@ -27,3 +27,4 @@ node_modules
 public/build
 
 tumblr-auth.js
+.DS_Store

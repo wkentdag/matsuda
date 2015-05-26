@@ -1,12 +1,19 @@
 extends layout
 block content
-	ul.navigation
-		each c in categories
-			li.nav-item
-				- var url = '/#' + c.title;
-				a(href=url)= c.title
+	include _sidebar
+	include _footer
+
 	input#nav-trigger.nav-trigger(type='checkbox')
 	label(for='nav-trigger')
 		span.glyphicon.glyphicon-menu-hamburger
+
 	.site-wrap
-		h1= title
+		h1#main-header= title
+		- var i=0
+		while i < 4
+			p.fixie
+			img.fixie
+			- i++
+
+block scripts
+	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')
