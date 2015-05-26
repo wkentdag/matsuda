@@ -1,0 +1,59 @@
+@import 'variables';
+// http://www.sitepoint.com/pure-css-off-screen-navigation-menu/
+
+ul.navigation {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.site-wrap {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 4em;
+  background-color: white;
+  background-size: 200%;
+  border-left: 1px solid $black;
+}
+
+label[for="nav-trigger"] {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-size: contain;
+}
+
+.nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.nav-trigger:checked + label {
+    left: 315;
+}
+ 
+.nav-trigger:checked ~ .site-wrap {
+    left: 300px;
+    // box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+.nav-trigger + label, .site-wrap {
+    transition: left 0.2s;
+}
+
