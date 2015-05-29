@@ -4,7 +4,7 @@
       "title": "Lovers",
       "galleries": [
         {
-          "tag": "lovers",
+          "tag": "Lovers",
           "type": "photo",
           "limit": 10,
           "id": "lovers"
@@ -15,7 +15,7 @@
       "title": "Fashion",
       "galleries": [
         {
-          "tag": "fashion",
+          "tag": "Fashion",
           "type": "photo",
           "limit": 10,
           "id": "fashion"
@@ -26,7 +26,7 @@
       "title": "Everyday",
       "galleries": [
         {
-          "tag": "everyday",
+          "tag": "Everyday",
           "type": "photo",
           "limit": 10,
           "id": "everyday"
@@ -37,7 +37,7 @@
       "title": "Video",
       "galleries": [
         {
-          "tag": "video",
+          "tag": "Video",
           "type": "video",
           "limit": 5,
           "id": "video"
@@ -65,7 +65,7 @@
       "title": "Travel",
       "galleries": [
         {
-          "tag": "travel",
+          "tag": "Travel",
           "type": "photo",
           "limit": 10,
           "id": "travel"
