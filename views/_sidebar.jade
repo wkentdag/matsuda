@@ -4,12 +4,12 @@
   .column-pane
     h4 Published Work:
     ul
-    each i in published
-      if (i.link)
-        a(href=i.link)
+      each i in published
+        if (i.link)
+          a(href=i.link)
+            li= i.publication
+        else
           li= i.publication
-      else
-        li= i.publication
   .column-pane
     h4 Contact + Inquiries:
     - var mailUrl = "mailto:" + contact.email;
@@ -22,7 +22,13 @@
   .column-pane
     h4 Galleries:
     ul
-      each c in categories
-        li.nav-item
-          - var url = '/#' + c.title;
-          a(href=url)= c.title
+      each o in tags
+        li
+          - var url = '/#' + o.id;
+          a(href=url)= o.tag
+    //- each c in categories
+    //-   - var nested = c.galleries[1];
+    //-   li.nav-item= nested
+    //-     - var url = '/#' + c.galleries;
+    //-     a(href=url)= c.title
+    //-     //- a= c.galleries.length

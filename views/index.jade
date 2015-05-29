@@ -1,7 +1,7 @@
 extends layout
 block content
 	include _sidebar
-	include _footer
+	//- include _footer
 
 	input#nav-trigger.nav-trigger(type='checkbox')
 	label(for='nav-trigger')
@@ -10,10 +10,20 @@ block content
 	.site-wrap
 		include _header
 		#fullpage
-			each c in categories
-				.section
-					p= c.title
-
+			.section
+				- var src = 'build/media/landing/0/500.jpg';
+				img(src=src)
+			- var makePath = function(gallery) {
+			- 	return 'build/media/' + gallery + '/'};
+			each o in tags
+				.section.main-content-container
+					- var contentDir = makePath(o.id);
+					.main-content
+						p= contentDir
+						//- ul
+						//- 	each folder in contentDir
+						//- 		li= folder
+						img.fixie
 
 block scripts
 	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')

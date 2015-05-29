@@ -1,7 +1,7 @@
 {
   "tagFile": "public/files/tags.json",
-  "imgDir": "public/build/media/images/",
-  "videoDir": "public/build/media/video/",
+  "imgDir": "public/build/media/",
+  "videoDir": "public/build/media/",
   "staticText": "public/files",
   "stylesheets": {
     "dev": "public/scss",
