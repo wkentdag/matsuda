@@ -1,5 +1,6 @@
 {
   "tagFile": "public/files/tags.json",
+  "categoriesFile": "public/files/categories.json",
   "imgDir": "public/build/media/",
   "videoDir": "public/build/media/",
   "staticText": "public/files",

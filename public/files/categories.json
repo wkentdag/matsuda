@@ -1,38 +1,98 @@
 {
-	"categories": [
+  "categories": [
+    {
+      "title": "Lovers",
+      "galleries": [
+        {
+          "tag": "lovers",
+          "type": "photo",
+          "limit": 10,
+          "id": "lovers"
+        }
+      ]
+    },
+    {
+      "title": "Fashion",
+      "galleries": [
+        {
+          "tag": "fashion",
+          "type": "photo",
+          "limit": 10,
+          "id": "fashion"
+        }
+      ]
+    },
+    {
+      "title": "Everyday",
+      "galleries": [
+        {
+          "tag": "everyday",
+          "type": "photo",
+          "limit": 10,
+          "id": "everyday"
+        }
+      ]
+    },
+    {
+      "title": "Video",
+      "galleries": [
+        {
+          "tag": "video",
+          "type": "video",
+          "limit": 5,
+          "id": "video"
+        }
+      ]
+    },
     {
       "title": "News",
       "galleries": [
-        "mpr", "gp"
+        {
+          "tag": "Minnesota Public Radio",
+          "type": "photo",
+          "limit": 10,
+          "id": "mpr"
+        },
+        {
+          "tag": "The Global Post",
+          "type": "photo",
+          "limit": 10,
+          "id": "global-post"
+        }
+      ]
+    },
+    {
+      "title": "Travel",
+      "galleries": [
+        {
+          "tag": "travel",
+          "type": "photo",
+          "limit": 10,
+          "id": "travel"
+        }
       ]
     },
     {
       "title": "International Relations",
-      "galleries": "intlRel"
+      "galleries": [
+        {
+          "tag": "International Relations",
+          "type": "photo",
+          "limit": 10,
+          "id": "intl-relations"
+        }
+      ]
     },
     {
       "title": "Now I Eat Rice With a Fork",
-      "galleries": "riceFork"
-    },
-    {
-      "title": "Lovers",
-      "galleries" : "lovers"
-    },
-    {
-      "title": "Travel",
-      "galleries": "travel"
-    },
-    {
-      "title": "Fashion",
-      "galleries": "fashion"
-    },
-    {
-      "title": "Everyday",
-      "galleries": "everyday"
-    },
-    {
-      "title": "Video",
-      "galleries": "video"
+      "galleries": [
+        {
+          "tag": "Now I Eat Rice With a Fork",
+          "type": "photo",
+          "limit": 10,
+          "id": "now-i-eat-rice-with-a-fork"
+        }
+      ]
     }
   ]
 }
