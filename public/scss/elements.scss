@@ -1,0 +1,11 @@
+@import 'variables';
+
+a {
+  color: $blue;
+}
+
+p {
+  color: $black;
+}
+
+@import 'classes';

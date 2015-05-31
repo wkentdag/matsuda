@@ -1,185 +1,29 @@
 extends layout
-
 block content
-	nav.navbar-default.navbar-fixed-top#overlay(role='navigation')
-		.container-fluid
-			.navbar-header
-				button(type='button' data-toggle='collapse' data-target='#nav-example').navbar-toggle.collapsed
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				p.navbar-brand
-					a#home.nav-link(href='/')=title
-			.collapse.navbar-collapse#nav-example
-				ul.nav.navbar-nav
-					li
-						a.nav-link(href='#about' data-menuanchor='about') about
-					li.dropdown
-						a.nav-link.dropdown-toggle(data-toggle='dropdown') news 
-							span.caret
-						ul.dropdown-menu(role='menu')
-							li
-								a.nav-link(href='#mpr' data-menuanchor='mpr') minnesota public radio
-							li
-								a.nav-link(href='#gp' data-menuanchor='gp') the global post
-					li
-						a.nav-link(href='#intlRel' data-menuanchor='intlRel') international relations
-					li
-						a.nav-link(href='#riceFork' data-menuanchor='riceFork') now i eat rice with a fork			
-					li
-						a.nav-link(href='#mpr' data-menuanchor='mpr') minnesota public radio
-					li
-						a.nav-link(href='#gp' data-menuanchor='gp') the global post
-			li
-				a.nav-link(href='#lovers' data-menuanchor='lovers') lovers
-			li
-				a.nav-link(href='#travel' data-menuanchor='travel') travel
-			li
-				a.nav-link(href='#fashion' data-menuanchor='fashion') fashion
-			li
-				a.nav-link(href='#everyday' data-menuanchor='everyday') everyday
-			li
-				a.nav-link(href='#video' data-menuanchor='video') video
+	include _sidebar
+	//- include _footer
 
-	#controls
-		.controls
-			span.glyphicon.glyphicon-chevron-left
-		.control
-			span.glyphicon.glyphicon-chevron-right
-		.control
-			span.glyphicon.glyphicon-resize-full
+	input#nav-trigger.nav-trigger(type='checkbox')
+	label(for='nav-trigger')
+		span.glyphicon.glyphicon-menu-hamburger
 
-	.fullpage
-		.section
-			.content
-				a(href='/')
-					each url in images.landing
-						img(src=url)
-			
-		.section(data-anchor='about')
-			.content
-				h4 Hey, I'm Will!
-				p I've been doing photography since 2004 and teaching it since 2010. I like to take photos of things that I think are important. I was born and raised in Portland, Oregon, but Minnesota is home for now.
-				hr
+	.site-wrap
+		include _header
+		#fullpage
+			.section
+				- var src = 'build/media/landing/0/500.jpg';
+				img(src=src)
+			- var makePath = function(gallery) {
+			- 	return 'build/media/' + gallery + '/'};
+			each o in tags
+				.section.main-content-container
+					- var contentDir = makePath(o.id);
+					.main-content
+						p= contentDir
+						//- ul
+						//- 	each folder in contentDir
+						//- 		li= folder
+						img.fixie
 
-				h4 published work:
-				ul.published
-					li Minnesota Public Radio
-					li The Global Post
-					li Zester Daily
-					li The Mac Weekly
-				hr
-
-				h4 contact + inquiries: 
-				p
-					a.notes.secondary(href="mailto:matsudaw@gmail.com") matsudaw@gmail.com
-					span  | 
-					a.notes.secondary(href="tel:5033132095") 503-313-2095
-				button(type='button').btn 
-					a.btn-link(href='https://www.tumblr.com/follow/williammatsuda' target='_blank') follow on tumblr
-				p.note.secondary.secondary [all work copyright Will Matsuda | 
-					a.notes.secondary(href='http://github.com/wkentdag/matsuda' target='_blank') site 
-					span.secondary by  
-					a.notes.secondary(href='http://wkd.pw' target="_blank") Will Kent-Daggett
-					span.secondary ]
-		.section(data-anchor='mpr')
-			- var i = 0;
-			.slideContainer
-				each url in images.mpr
-					.slide
-						- var caption = images.mpr_captions[i];
-						img(src=url)
-						if (caption)
-							p.img_caption= caption
-						- i++;
-
-		.section(data-anchor='gp')
-			- var i = 0;
-			.slideContainer
-				each url in images.gp
-					.slide
-						- var caption = images.gp_captions[i];
-						img(src=url)
-						if (caption)
-							p.img_caption= caption
-						- i++;
-		.section(data-anchor='intlRel')
-			- i = 0;
-			each url in images.intlRel
-				.slide.photoSlide
-					//- img(src=url)
-					- caption = images.intlRel_captions[i];
-					if (caption)
-						img.hasCaption(src=url)
-						p.img_caption= caption
-					else
-						img(src=url)
-					- i++;
-		.section(data-anchor='riceFork')
-			- i = 0;
-			each url in images.riceFork
-				.slide.photoSlide
-					//- img(src=url)
-					- caption = images.riceFork_captions[i];
-					if (caption)
-						img.hasCaption(src=url)
-						p.img_caption= caption
-					else
-						img(src=url)
-					- i++;
-		.section(data-anchor='lovers')
-			- var i = 0;
-			.slideContainer
-				each url in images.lovers
-					.slide
-						- var caption = images.lovers_captions[i];
-						img(src=url)
-						if (caption)
-							p.img_caption= caption
-						- i++;
-		.section(data-anchor='travel')
-			- var i = 0;
-			.slideContainer
-				each url in images.travel
-					.slide
-						- var caption = images.travel_captions[i];
-						img(src=url)
-						if (caption)
-							p.img_caption= caption
-						- i++;
-		.section(data-anchor='fashion')
-			- var i = 0;
-			.slideContainer
-				each url in images.fashion
-					.slide
-						- var caption = images.fashion_captions[i];
-						img(src=url)
-						if (caption)
-							p.img_caption= caption
-						- i++;
-		.section(data-anchor='everyday')
-			- var i = 0;
-			.slideContainer
-				each url in images.everyday
-					.slide
-						- var caption = images.everyday_captions[i];
-						img(src=url)
-						if (caption)
-							p.img_caption= caption
-						- i++;
-		.section(data-anchor='video')
-			- i = 0;
-			each url in images.video
-				.slide.photoSlide
-					- var bg = 'background-image: ' + url;
-					//- video.vid(autoplay="autoplay" controls="controls")
-					//- 	source(src='//www.youtube.com/embed/M5Gz4zCckkg' type="video/mp4")
-					iframe(src=url, frameborder='0', allowfullscreen='allowfullscreen')
-					- caption = images.video_captions[i];
-					if (caption)
-						p.img_caption= caption
-
-
-
-			
+block scripts
+	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')

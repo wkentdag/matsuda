@@ -1,0 +1,13 @@
+{
+  "categories": "public/files/categories.json",
+  "staticMedia": "public/build/media/",
+  "staticText": "public/files",
+  "stylesheets": {
+    "dev": "public/scss",
+    "build": "public/build/stylesheets"
+  },
+  "javascripts": {
+    "dev": "public/js",
+    "build": "public/build/javascripts"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "categories": [
+    {
+      "title": "Lovers",
+      "galleries": [
+        {
+          "tag": "Lovers",
+          "type": "photo",
+          "limit": 10,
+          "id": "lovers"
+        }
+      ]
+    },
+    {
+      "title": "Fashion",
+      "galleries": [
+        {
+          "tag": "Fashion",
+          "type": "photo",
+          "limit": 10,
+          "id": "fashion"
+        }
+      ]
+    },
+    {
+      "title": "Everyday",
+      "galleries": [
+        {
+          "tag": "Everyday",
+          "type": "photo",
+          "limit": 10,
+          "id": "everyday"
+        }
+      ]
+    },
+    {
+      "title": "Video",
+      "galleries": [
+        {
+          "tag": "Video",
+          "type": "video",
+          "limit": 5,
+          "id": "video"
+        }
+      ]
+    },
+    {
+      "title": "News",
+      "galleries": [
+        {
+          "tag": "Minnesota Public Radio",
+          "type": "photo",
+          "limit": 10,
+          "id": "mpr"
+        },
+        {
+          "tag": "The Global Post",
+          "type": "photo",
+          "limit": 10,
+          "id": "global-post"
+        }
+      ]
+    },
+    {
+      "title": "Travel",
+      "galleries": [
+        {
+          "tag": "Travel",
+          "type": "photo",
+          "limit": 10,
+          "id": "travel"
+        }
+      ]
+    },
+    {
+      "title": "International Relations",
+      "galleries": [
+        {
+          "tag": "International Relations",
+          "type": "photo",
+          "limit": 10,
+          "id": "intl-relations"
+        }
+      ]
+    },
+    {
+      "title": "Now I Eat Rice With a Fork",
+      "galleries": [
+        {
+          "tag": "Now I Eat Rice With a Fork",
+          "type": "photo",
+          "limit": 10,
+          "id": "now-i-eat-rice-with-a-fork"
+        }
+      ]
+    }
+  ]
+}

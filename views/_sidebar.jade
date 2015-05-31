@@ -1,0 +1,34 @@
+#navigation.column-container
+  .column-pane
+    p= about
+  .column-pane
+    h4 Published Work:
+    ul
+      each i in published
+        if (i.link)
+          a(href=i.link)
+            li= i.publication
+        else
+          li= i.publication
+  .column-pane
+    h4 Contact + Inquiries:
+    - var mailUrl = "mailto:" + contact.email;
+    - var telUrl = "tel:" + contact.phone;
+    a(href=mailUrl)
+      p= contact.email
+    a(href=telUrl)
+      p=contact.phone
+
+  .column-pane
+    h4 Galleries:
+    ul
+      each o in tags
+        li
+          - var url = '/#' + o.id;
+          a(href=url)= o.tag
+    //- each c in categories
+    //-   - var nested = c.galleries[1];
+    //-   li.nav-item= nested
+    //-     - var url = '/#' + c.galleries;
+    //-     a(href=url)= c.title
+    //-     //- a= c.galleries.length
