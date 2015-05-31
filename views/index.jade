@@ -16,9 +16,14 @@ block content
 			each gallery in galleries
 				.section
 					each obj in gallery.media
-						.slide.main-content-container
-							.main-content
-								img(src=obj.src)
+						.slide
+							.main-content-container
+								.main-content
+									img(src=obj.src)
+							if obj.caption
+								.column-container
+									.column-pane
+										p= obj.caption
 						
 
 block scripts
