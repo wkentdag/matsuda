@@ -1,6 +1,6 @@
 extends layout
 block content
-	include _sidebar
+	//- include _sidebar
 	//- include _footer
 
 	input#nav-trigger.nav-trigger(type='checkbox')
@@ -13,17 +13,13 @@ block content
 			.section
 				- var src = 'build/media/landing/0/500.jpg';
 				img(src=src)
-			- var makePath = function(gallery) {
-			- 	return 'build/media/' + gallery + '/'};
-			each o in tags
-				.section.main-content-container
-					- var contentDir = makePath(o.id);
-					.main-content
-						p= contentDir
-						//- ul
-						//- 	each folder in contentDir
-						//- 		li= folder
-						img.fixie
+			each gallery in galleries
+				.section
+					each obj in gallery.media
+						.slide.main-content-container
+							.main-content
+								img(src=obj.src)
+						
 
 block scripts
 	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')
