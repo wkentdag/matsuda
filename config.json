@@ -2,6 +2,7 @@
   "categories": "public/files/categories.json",
   "staticMedia": "public/build/media/",
   "staticText": "public/files",
+  "staticAssetMap": "public/files/staticAssets.json",
   "stylesheets": {
     "dev": "public/scss",
     "build": "public/build/stylesheets"
