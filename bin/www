@@ -1,16 +1,29 @@
 #!/usr/bin/env node
 var debug = require('debug')('matsuda');
 var app = require('../app');
+var del = require('del');
 var bundleStaticAssets = require('../lib/bundle');
 
 app.set('port', process.env.PORT || 3000);
-bundleStaticAssets(function(err, result) {
-  if (err) {
-    console.log(err);
-  } else {
-    var server = app.listen(app.get('port'), function() {
-      debug('Express server listening on port ' + server.address().port);
-    });
-  }
-}); //   end bundleStaticAssets
+
+if (process.env.BUNDLE) {
+  bundleStaticAssets(function(err, result) {
+    if (err) {
+      console.log(err);
+    } else {
+      var server = app.listen(app.get('port'), function() {
+        debug('Express server listening on port ' + server.address().port);
+      });
+    }
+  }); //   end bundleStaticAssets
+} else {
+  var server = app.listen(app.get('port'), function() {
+    console.log('Did not load static assets. To bundle assets, restart the app with process.env.BUNDLE=true');
+    debug('Express server listening on port ' + server.address().port);
+  });
+}
+
+
+
+
 
