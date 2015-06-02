@@ -1,6 +1,6 @@
 extends layout
 block content
-	//- include _sidebar
+	include _sidebar
 	//- include _footer
 
 	input#nav-trigger.nav-trigger(type='checkbox')
@@ -21,7 +21,7 @@ block content
 								.main-content
 									- var video = (obj.src.indexOf('.mp4') > -1);
 									if video
-										video(src=obj.src controls)
+										video(src=obj.src controls type='video/mp4')
 									else
 										img(src=obj.src)
 							if obj.caption
