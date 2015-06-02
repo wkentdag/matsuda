@@ -19,7 +19,11 @@ block content
 						.slide
 							.main-content-container
 								.main-content
-									img(src=obj.src)
+									- var video = (obj.src.indexOf('.mp4') > -1);
+									if video
+										video(src=obj.src controls)
+									else
+										img(src=obj.src)
 							if obj.caption
 								.column-container
 									.column-pane
