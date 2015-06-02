@@ -2,7 +2,7 @@
 var debug = require('debug')('matsuda');
 var app = require('../app');
 var del = require('del');
-var bundleStaticAssets = require('../lib/bundle');
+var bundleStaticAssets = require('../lib/bundle').bundle;
 
 app.set('port', process.env.PORT || 3000);
 
