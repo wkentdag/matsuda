@@ -1,34 +1,31 @@
 extends layout
 block content
+	include _header
 	include _sidebar
-	//- include _footer
+	include _footer
 
 	input#nav-trigger.nav-trigger(type='checkbox')
 	label(for='nav-trigger')
 		span.glyphicon.glyphicon-menu-hamburger
 
 	.site-wrap
-		include _header
 		#fullpage
 			.section
-				.main-content-container
-					img.main-content(src='build/media/landing/0.jpg')
+				.column6-container
+					.column-pane
+						img.main-content(src='build/media/landing/0.jpg')
 			each gallery in galleries
 				.section
 					each obj in gallery.media
 						.slide
-							.main-content-container
-								.main-content
+							.column6-container
+								.column-pane
 									- var video = (obj.src.indexOf('.mp4') > -1);
 									if video
 										video(src=obj.src controls type='video/mp4')
 									else
 										img(src=obj.src)
 							if obj.caption
-								.column-container
+								.column3-container
 									.column-pane
-										p= obj.caption
-						
-
-block scripts
-	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')
+										p.caption= obj.caption

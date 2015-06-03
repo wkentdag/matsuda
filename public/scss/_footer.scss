@@ -3,9 +3,9 @@
 #footer {
   position: fixed;
   bottom: 0;
-  height: 50px;
+  height: $header-height;
   width: 100%;
-  background-color: white;
+  background-color: transparent;
   border: 1px solid red;
   z-index: 2;
 }

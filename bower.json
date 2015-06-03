@@ -21,7 +21,6 @@
     "fullpage.js": "~2.5.9",
     "jquery": "~2.1.3",
     "bootstrap": "~3.3.4",
-    "startbootstrap-simple-sidebar": "https://github.com/IronSummitMedia/startbootstrap-simple-sidebar.git#~1.0.3"
   },
   "devDependencies": {
     "fixie": "https://github.com/ryhan/fixie.git"

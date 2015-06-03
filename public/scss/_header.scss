@@ -4,17 +4,20 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 50px;
+  height: $header-height;
   width: 100%;
-  background-color: white;
-  border: 1px solid red;
+  background-color: transparent;
+  // border: 1px solid red;
   z-index: 2;
+
+  .column-pane {
+    margin: auto;
+  }
 }
 
 #main-header {
   margin: auto;
   margin-left: 1%;
   text-align: left;
-  // border-bottom: 3px solid $black;
   min-width: 250px;
 }
