@@ -3,3 +3,14 @@ $black: #2a2529;
 $pink: #fb8b90;
 
 $header-height: 5%;
+$header-bg: transparent;
+
+@mixin container() {
+  border: 1px dotted red;
+  float: left;
+  margin: 1%;
+
+  * {
+    max-width: 100%;
+  }
+}

@@ -5,7 +5,7 @@
   bottom: 0;
   height: $header-height;
   width: 100%;
-  background-color: transparent;
+  background-color: $header-bg;
   border: 1px solid red;
   z-index: 2;
 }

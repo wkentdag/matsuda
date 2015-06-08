@@ -6,8 +6,8 @@
   left: 0;
   height: $header-height;
   width: 100%;
-  background-color: transparent;
-  // border: 1px solid red;
+  background-color: $header-bg;
+  border: 1px solid red;
   z-index: 2;
 
   .column-pane {
@@ -16,8 +16,9 @@
 }
 
 #main-header {
-  margin: auto;
-  margin-left: 1%;
+  // margin: auto;
+  // margin-left: 1%;
   text-align: left;
-  min-width: 250px;
+  // border-bottom: 3px solid $black;
+  // min-width: 250px;
 }

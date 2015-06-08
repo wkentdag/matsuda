@@ -12,20 +12,20 @@ block content
 		#fullpage
 			.section
 				.column6-container
-					.column-pane
-						img.main-content(src='build/media/landing/0.jpg')
+					img(src='build/media/landing/0.jpg')
 			each gallery in galleries
 				.section
 					each obj in gallery.media
 						.slide
 							.column6-container
-								.column-pane
-									- var video = (obj.src.indexOf('.mp4') > -1);
-									if video
-										video(src=obj.src controls type='video/mp4')
-									else
-										img(src=obj.src)
+								- var video = (obj.src.indexOf('.mp4') > -1);
+								if video
+									video(src=obj.src controls type='video/mp4')
+								else
+									img(src=obj.src)
 							if obj.caption
 								.column3-container
-									.column-pane
-										p.caption= obj.caption
+									p.caption= obj.caption
+									
+block scripts
+	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')
