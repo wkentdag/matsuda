@@ -4,13 +4,21 @@
   min-width: 100%;
   min-height: 100%;
   position: relative;
-  top: $header-padding;
-  bottom: 100%;
   left: 0;
   z-index: 1;
-  background-size: 200%;
   background-color: white;
-  // border-left: 1px solid $black;
+}
+
+.column3-container {
+  @include container();
+  width: 25%;
+  max-width: 300px;
+}
+
+.column6-container {
+  @include container();
+  width: 50%;
+  max-width: 600px;
 }
 
 .column-container {
@@ -19,8 +27,8 @@
 }
 
 .column-pane {
-  width: 90%;
-  margin: auto;
+  // width: 90%;
+  // margin: auto;
   border: 1px dotted red;
 }
 

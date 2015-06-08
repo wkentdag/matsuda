@@ -1,33 +1,31 @@
 extends layout
 block content
+	include _header
 	include _sidebar
-	//- include _footer
+	include _footer
 
 	input#nav-trigger.nav-trigger(type='checkbox')
 	label(for='nav-trigger')
 		span.glyphicon.glyphicon-menu-hamburger
 
 	.site-wrap
-		include _header
 		#fullpage
 			.section
-				.main-content-container
-					img.main-content(src='build/media/landing/0.jpg')
+				.column6-container
+					img(src='build/media/landing/0.jpg')
 			each gallery in galleries
 				.section
 					each obj in gallery.media
 						.slide
-							.main-content-container
-								.main-content
-									- var video = (obj.src.indexOf('.mp4') > -1);
-									if video
-										video(src=obj.src controls type='video/mp4')
-									else
-										img(src=obj.src)
+							.column6-container
+								- var video = (obj.src.indexOf('.mp4') > -1);
+								if video
+									video(src=obj.src controls type='video/mp4')
+								else
+									img(src=obj.src)
 							if obj.caption
-								.column-container
-									.column-pane
-										p= obj.caption
+								.column3-container
+									p.caption= obj.caption
 						
 
 block scripts
