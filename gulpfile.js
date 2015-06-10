@@ -45,7 +45,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.dev.scripts, ['js']);
+  gulp.watch(paths.dev.js, ['js']);
   gulp.watch(paths.dev.scss, ['sass']);
 });
 
