@@ -2,16 +2,22 @@
 
 a {
   color: $blue;
+  font-family: $body-font;
 }
 
 p {
   color: $black;
+  font-family: $body-font;
 }
 
 h2 {
   display: inline-block;
   margin: 0 1%;
   // padding: none;
+}
+
+* {
+  font-family: $body-font;
 }
 
 img, video {
