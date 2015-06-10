@@ -7,6 +7,7 @@
   left: 0;
   z-index: 1;
   background-color: white;
+  margin-left: 1%;
 }
 
 .column3-container {
@@ -29,21 +30,20 @@
 .column-pane {
   // width: 90%;
   // margin: auto;
-  border: 1px dotted red;
+  // border: 1px dotted red;
 }
 
 .main-content-container {
   width: 50%;
-  margin-left: 1%;
   max-width: 600px;
-  border: 1px solid red;
+  // border: 1px solid red;
 }
 
 .main-content {
   width: 90%;
   max-height: 100%;
   margin: auto;
-  border: 1px dotted red;
+  // border: 1px dotted red;
 
   * {
     margin: auto;
