@@ -2,7 +2,6 @@ $(document).ready(function() {
     var anchors = [];
     $('.section').each(function(i) {
       var gallery = $(this).attr('data-gallery');
-      // console.log(gallery);
       anchors.push(gallery);
     });
 
@@ -12,7 +11,8 @@ $(document).ready(function() {
       loopTop: true,
       controlArrows: false,
       scrollingSpeed: 500,
-      anchors: anchors
+      anchors: anchors,
+      verticalCentered: false
     });
 
     
@@ -45,9 +45,4 @@ function imageSource(newIndex) {
     var newSource = stem + newIndex + '.jpg';
     $(this).attr('src', newSource);
   });
-}
-
-//  https://stackoverflow.com/questions/1431094/how-do-i-replace-a-character-at-a-particular-index-in-javascript
-String.prototype.replaceAt=function(index, character) {
-    return this.substr(0, index) + character + this.substr(index+character.length);
 }

@@ -11,21 +11,23 @@ block content
 	.site-wrap
 		#fullpage
 			.section(data-gallery='')
-				.column6-container
-					img(src='build/media/landing/2.jpg')
+				.fullpage-container
+					.column6-container
+						img(src='build/media/landing/2.jpg')
 			each gallery in galleries
 				.section(data-gallery= gallery.link)
 					each obj in gallery.media
 						.slide
-							.column6-container
-								- var video = (obj.src.indexOf('.mp4') > -1);
-								if video
-									video(src=obj.src controls type='video/mp4')
-								else
-									img(src=obj.src)
-							if obj.caption
-								.column3-container
-									p.caption= obj.caption
+							.fullpage-container
+								.column6-container
+									- var video = (obj.src.indexOf('.mp4') > -1);
+									if video
+										video(src=obj.src controls type='video/mp4')
+									else
+										img(src=obj.src)
+								if obj.caption
+									.column3-container
+										p.caption= obj.caption
 									
 block scripts
 	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')

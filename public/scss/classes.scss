@@ -7,7 +7,7 @@
   left: 0;
   z-index: 1;
   background-color: white;
-  margin-left: 1%;
+  // margin-left: 1%;
 }
 
 .column3-container {
@@ -29,23 +29,16 @@
   max-width: 900px;
 }
 
-.main-content-container {
-  width: 50%;
-  max-width: 600px;
-  // border: 1px solid red;
+.column-pane {
+  padding-right: 1%;
 }
 
-.main-content {
-  width: 90%;
-  max-height: 100%;
-  margin: auto;
-  // border: 1px dotted red;
-
-  * {
-    margin: auto;
-    text-align: center;
-  }
+.fullpage-container {
+  height: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
+
 
 @import 'sidebar';
 @import 'footer';
