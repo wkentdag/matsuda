@@ -26,12 +26,12 @@
       each section in sections
 
         if !section.galleries
-          a(href=section.link)
+          a(href= '#' + section.link)
             li= section.title
         else
           li= section.title
             ul
               each gal in section.galleries
-                a(href=gal.link)
+                a(href= '#' + gal.link)
                   li.subSection=gal.title
 
