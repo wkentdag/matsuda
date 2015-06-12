@@ -3,6 +3,14 @@
 a {
   color: $blue;
   font-family: $body-font;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: $pink;
+}
+.hover {
+  color: $pink;
 }
 
 p {

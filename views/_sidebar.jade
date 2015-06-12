@@ -12,12 +12,13 @@
           li= i.publication
   .column-pane
     h4 Contact + Inquiries:
-    - var mailUrl = "mailto:" + contact.email;
-    - var telUrl = "tel:" + contact.phone;
-    a(href=mailUrl)
-      p= contact.email
-    a(href=telUrl)
-      p=contact.phone
+    ul
+      - var mailUrl = "mailto:" + contact.email;
+      - var telUrl = "tel:" + contact.phone;
+      a(href=mailUrl)
+        li= contact.email
+      a(href=telUrl)
+        li=contact.phone
 
   .column-pane
     h4 Galleries:

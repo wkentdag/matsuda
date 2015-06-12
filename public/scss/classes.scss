@@ -22,9 +22,11 @@
   max-width: 600px;
 }
 
-.column-container {
-  width: 25%;
-  max-width: 300px;
+.column9-container {
+  @include container();
+  margin-left: 0;
+  width: 75%;
+  max-width: 900px;
 }
 
 .main-content-container {
