@@ -10,11 +10,11 @@ block content
 
 	.site-wrap
 		#fullpage
-			.section
+			.section(data-gallery='')
 				.column6-container
 					img(src='build/media/landing/2.jpg')
 			each gallery in galleries
-				.section
+				.section(data-gallery= gallery.link)
 					each obj in gallery.media
 						.slide
 							.column6-container

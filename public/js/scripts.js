@@ -1,8 +1,18 @@
 $(document).ready(function() {
+    var anchors = [];
+    $('.section').each(function(i) {
+      var gallery = $(this).attr('data-gallery');
+      // console.log(gallery);
+      anchors.push(gallery);
+    });
+
+
     $('#fullpage').fullpage({
       loopBottom: true,
       loopTop: true,
-      controlArrows: false
+      controlArrows: false,
+      scrollingSpeed: 500,
+      anchors: anchors
     });
 
     
