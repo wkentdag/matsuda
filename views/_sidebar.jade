@@ -1,30 +1,7 @@
-#navigation.column3-container
-  .column-pane
-    p= about
-  .column-pane
-    h4 Published Work:
-    ul
-      each i in published
-        if (i.link)
-          a(href=i.link)
-            li= i.publication
-        else
-          li= i.publication
-  .column-pane
-    h4 Contact + Inquiries:
-    ul
-      - var mailUrl = "mailto:" + contact.email;
-      - var telUrl = "tel:" + contact.phone;
-      a(href=mailUrl)
-        li= contact.email
-      a(href=telUrl)
-        li=contact.phone
-
-  .column-pane
-    h4 Galleries:
-    ul
+nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
+  .container-fluid
+    ul.nav.navmenu-nav
       each section in sections
-
         if !section.galleries
           a(href= '#' + section.link)
             li= section.title
@@ -32,6 +9,5 @@
           li= section.title
             ul
               each gal in section.galleries
-                a(href= '#' + gal.link)
-                  li.subSection=gal.title
-
+                a(href='#' + gal.link)
+                  li.subSection= gal.title

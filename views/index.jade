@@ -1,32 +1,27 @@
 extends layout
 block content
-	include _header
 	include _sidebar
-	include _footer
+	include _header
 
-	input#nav-trigger.nav-trigger(type='checkbox')
-	label(for='nav-trigger')
-		span.glyphicon.glyphicon-menu-hamburger
-
-	.site-wrap
+	.container-fluid
 		#fullpage
 			.section(data-gallery='')
-				.fullpage-container
-					.column6-container
+				.row
+					.col-xs-6
 						img(src='build/media/landing/2.jpg')
 			each gallery in galleries
 				.section(data-gallery= gallery.link)
 					each obj in gallery.media
 						.slide
-							.fullpage-container
-								.column6-container
+							.row
+								.col-xs-12.col-md-9
 									- var video = (obj.src.indexOf('.mp4') > -1);
 									if video
 										video(src=obj.src controls type='video/mp4')
 									else
-										img(src=obj.src)
+										img.image-responsive.center-block(src=obj.src)
 								if obj.caption
-									.column3-container
+									.hidden-xs.hidden-sm.col-md-3
 										p.caption= obj.caption
 									
 block scripts

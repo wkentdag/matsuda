@@ -1,19 +1,6 @@
 @import 'variables';
 
-p.caption {
-  text-align: right;
-  font-style: italic;
-}
-
-ul {
-  list-style: none;
-}
-
-li.subSection {
-  display: none;
-}
-
-#gallery-header {
-  font-style: italic;
-  color: $blue;
+.fullpage-content {
+  margin-top: $header-height;
+  @include test();
 }

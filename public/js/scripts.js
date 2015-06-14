@@ -11,15 +11,14 @@ $(document).ready(function() {
       loopTop: true,
       controlArrows: false,
       scrollingSpeed: 500,
-      anchors: anchors,
-      verticalCentered: false
+      anchors: anchors
     });
 
     
-    getWidth();
-    $(window).resize(function() {
-      console.log(getWidth() );
-    });
+    // getWidth();
+    // $(window).resize(function() {
+    //   console.log(getWidth() );
+    // });
 });
 
 function getWidth() {

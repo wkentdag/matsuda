@@ -1,44 +1,9 @@
 @import 'variables';
 
-.site-wrap {
-  min-width: 100%;
-  min-height: 100%;
-  position: relative;
-  left: 0;
-  z-index: 1;
-  background-color: white;
-  // margin-left: 1%;
-}
-
-.column3-container {
-  @include container();
-  width: 25%;
-  max-width: 300px;
-}
-
-.column6-container {
-  @include container();
-  width: 50%;
-  max-width: 600px;
-}
-
-.column9-container {
-  @include container();
-  margin-left: 0;
-  width: 75%;
-  max-width: 900px;
-}
-
-.column-pane {
-  padding-right: 1%;
-}
 
 .fullpage-container {
-  height: 100%;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  background-color: red;
 }
-
 
 @import 'sidebar';
 @import 'footer';
