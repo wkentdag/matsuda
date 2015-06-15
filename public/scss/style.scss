@@ -1,6 +1,8 @@
 @import 'variables';
 
-.fullpage-content {
-  margin-top: $header-height;
-  @include test();
+.currentGallery {
+  color: $blue;
+  font-style: italic;
+  margin-left: 1%;
 }
+

@@ -5,13 +5,26 @@ $(document).ready(function() {
       anchors.push(gallery);
     });
 
+    var titleText = $('.title').text();
 
     $('#fullpage').fullpage({
       loopBottom: true,
       loopTop: true,
       controlArrows: false,
       scrollingSpeed: 500,
-      anchors: anchors
+      anchors: anchors,
+      paddingTop: '50px',
+      afterLoad: function(anchorLink, index) {
+        var colon = ':';   
+        if (index !== 1) {
+          $('.title').text(titleText + colon);
+          var title = $(this).data('title');
+          $('.currentGallery').text(title);
+        } else {
+          $('.title').text(titleText);
+          $('.currentGallery').text('');
+        }        
+      }
     });
 
     
