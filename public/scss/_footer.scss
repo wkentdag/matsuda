@@ -1,1 +1,14 @@
 @import 'variables';
+
+#footer {
+  @include test();
+}
+
+.control-container {
+  @include test();
+  height: 100%;
+  width: auto;
+  margin: auto;
+  float: left;
+}
+
