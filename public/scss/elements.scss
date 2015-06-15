@@ -1,27 +1,30 @@
 @import 'variables';
 
+* {
+  font-family: $body-font;
+}
+
 a {
   color: $blue;
   font-family: $body-font;
   text-decoration: none;
 }
-
 a:hover {
   color: $pink;
+}
+a:visited {
+  color: $blue;
+  font-family: $body-font;
+  text-decoration: none;
 }
 
 p {
   color: $black;
-  font-family: $body-font;
 }
 
 h1 {
   display: inline-block;
   margin: 0;
-}
-
-* {
-  font-family: $body-font;
 }
 
 img, video {
@@ -30,5 +33,8 @@ img, video {
   margin: auto;
 }
 
+ul {
+  text-align: right;
+}
+
 @import 'classes';
-@import 'style';

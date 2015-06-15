@@ -9,6 +9,32 @@
   margin-top: 1%;
 }
 
+.currentGallery {
+  color: $blue;
+  font-style: italic;
+  margin-left: 1%;
+}
+
+.currentGallery:hover {
+  color: $pink;
+  text-decoration: underline;
+}
+
+p.caption {
+  font-style: italic;
+  max-width: 320px;
+  text-align: center;
+  margin: auto;
+}
+
+p.about {
+  text-align: right;
+}
+
+.header {
+  text-decoration: underline;
+}
+
 @import 'sidebar';
 @import 'footer';
 @import 'header';

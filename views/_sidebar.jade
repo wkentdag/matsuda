@@ -3,6 +3,21 @@ nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
     p.about= about
 
     h3
+      span.header Galleries
+      span :
+    ul
+      each section in sections
+        if !section.galleries
+          a(href= '#' + section.link)
+            li= section.title
+        else
+          li= section.title
+            ul
+              each gal in section.galleries
+                a(href='#' + gal.link)
+                  li.subSection= gal.title
+                  
+    h3
       span.header Published Work
       span :
     ul
@@ -24,17 +39,4 @@ nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
       a(href=telUrl)
         li=contact.phone
 
-    h3
-      span.header Galleries
-      span :
-    ul.nav.navmenu-nav
-      each section in sections
-        if !section.galleries
-          a(href= '#' + section.link)
-            li= section.title
-        else
-          li= section.title
-            ul
-              each gal in section.galleries
-                a(href='#' + gal.link)
-                  li.subSection= gal.title
+    
