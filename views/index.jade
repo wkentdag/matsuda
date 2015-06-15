@@ -7,22 +7,23 @@ block content
 		#fullpage
 			.section(data-gallery='')
 				.row
-					.col-xs-6
-						img(src='build/media/landing/2.jpg')
+					.col-xs-12
+						img.image-responsive.center-block(src='build/media/landing/0.jpg')
 			each gallery in galleries
-				.section(data-gallery= gallery.link)
+				.section(data-gallery=gallery.link data-title=gallery.title)
 					each obj in gallery.media
 						.slide
 							.row
-								.col-xs-12.col-md-9
+								.col-xs-12
 									- var video = (obj.src.indexOf('.mp4') > -1);
 									if video
-										video(src=obj.src controls type='video/mp4')
+										video.center-block(src=obj.src controls type='video/mp4')
 									else
 										img.image-responsive.center-block(src=obj.src)
-								if obj.caption
-									.hidden-xs.hidden-sm.col-md-3
-										p.caption= obj.caption
+							if obj.caption
+								.row
+								.col-xs-12
+									p.caption= obj.caption
 									
 block scripts
 	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')
