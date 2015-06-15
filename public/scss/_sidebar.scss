@@ -8,3 +8,8 @@
 #sidebar {
   margin-top: $header-height;
 }
+
+.sidebar-container {
+  height: 100%;
+  overflow-y: scroll;
+}
