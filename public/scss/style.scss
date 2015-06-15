@@ -6,6 +6,11 @@
   margin-left: 1%;
 }
 
+.currentGallery:hover {
+  color: $pink;
+  text-decoration: underline;
+}
+
 p.caption {
   font-style: italic;
   max-width: 320px;

@@ -3,13 +3,10 @@
 a {
   color: $blue;
   font-family: $body-font;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:hover {
-  color: $pink;
-}
-.hover {
   color: $pink;
 }
 

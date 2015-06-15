@@ -19,6 +19,7 @@ $(document).ready(function() {
           $('.colon').text(':');
           var title = $(this).data('title');
           $('.currentGallery').text(title);
+          $('.currentHash').attr('href', '#' + $(this).data('gallery'));
         } else {
           $('.colon').text('');
           $('.currentGallery').text('');
