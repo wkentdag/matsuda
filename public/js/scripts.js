@@ -15,13 +15,12 @@ $(document).ready(function() {
       anchors: anchors,
       paddingTop: '50px',
       afterLoad: function(anchorLink, index) {
-        var colon = ':';   
         if (index !== 1) {
-          $('.title').text(titleText + colon);
+          $('.colon').text(':');
           var title = $(this).data('title');
           $('.currentGallery').text(title);
         } else {
-          $('.title').text(titleText);
+          $('.colon').text('');
           $('.currentGallery').text('');
         }        
       }
