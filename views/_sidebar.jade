@@ -1,5 +1,32 @@
 nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
   .container-fluid
+    p.about= about
+
+    h3
+      span.header Published Work
+      span :
+    ul
+      each i in published
+        if (i.link)
+          a(href=i.link)
+            li= i.publication
+        else
+          li= i.publication
+
+    h3
+      span.header Contact + Inquiries
+      span :
+    ul
+      - var mailUrl = "mailto:" + contact.email;
+      - var telUrl = "tel:" + contact.phone;
+      a(href=mailUrl)
+        li= contact.email
+      a(href=telUrl)
+        li=contact.phone
+
+    h3
+      span.header Galleries
+      span :
     ul.nav.navmenu-nav
       each section in sections
         if !section.galleries
