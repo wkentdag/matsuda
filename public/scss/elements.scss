@@ -37,7 +37,7 @@ ul {
   text-align: right;
   list-style-type: initial;
 
-  li:hover {
+  li:not(.withSubsection):hover {
     list-style-type: circle;
   }
 }
