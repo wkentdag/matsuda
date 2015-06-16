@@ -1,11 +1,11 @@
 @import 'variables';
 
 #footer {
-  @include test();
+  // @include test();
 }
 
 .control-container {
-  @include test();
+  // @include test();
   height: 100%;
   width: auto;
   margin: auto;
