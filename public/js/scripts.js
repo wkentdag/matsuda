@@ -28,6 +28,15 @@ $(document).ready(function() {
       }
     });
 
+    $('#slideLeft').click(function(e) {
+      e.preventDefault();
+      $.fn.fullpage.moveSlideLeft();
+    });
+    $('#slideRight').click(function(e) {
+      e.preventDefault();
+      $.fn.fullpage.moveSlideRight();
+    });
+
     
     // getWidth();
     // $(window).resize(function() {
