@@ -12,7 +12,9 @@ nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
             a(href= '#' + section.link)
               li= section.title
           else
-            li= section.title
+            li.withSubsection
+                span= section.title
+                span :
               ul
                 each gal in section.galleries
                   a(href='#' + gal.link)

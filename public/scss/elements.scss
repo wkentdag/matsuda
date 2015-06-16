@@ -35,6 +35,11 @@ img, video {
 
 ul {
   text-align: right;
+  list-style-type: initial;
+
+  li:hover {
+    list-style-type: circle;
+  }
 }
 
 button {
