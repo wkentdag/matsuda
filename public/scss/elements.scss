@@ -25,6 +25,7 @@ p {
 h1 {
   display: inline-block;
   margin: 0;
+  color: $black;
 }
 
 img, video {
@@ -36,9 +37,14 @@ img, video {
 ul {
   text-align: right;
   list-style-type: initial;
+  color: $black;
 
   li:not(.withSubsection):hover {
     list-style-type: circle;
+  }
+
+  li {
+    color: inherit;
   }
 }
 
