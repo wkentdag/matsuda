@@ -1,8 +1,12 @@
 @import 'variables';
 
-
 .fullpage-container {
-  background-color: red;
+  max-height: 90%;
+  max-width: 100%;
+  width: 100%;
+  height: 90%;
+  min-width: 100%;
+  min-height: 90%;
 }
 
 .title {
@@ -22,9 +26,9 @@
 
 p.caption {
   font-style: italic;
-  max-width: 320px;
   text-align: center;
-  margin: auto;
+  display: table-caption;
+  caption-side: bottom;
 }
 
 p.about {
@@ -33,6 +37,11 @@ p.about {
 
 .header {
   text-decoration: underline;
+}
+
+.imageContainer {
+  display: table;
+  margin: auto;
 }
 
 @import 'sidebar';

@@ -13,8 +13,6 @@ $(document).ready(function() {
       controlArrows: false,
       scrollingSpeed: 500,
       anchors: anchors,
-      paddingTop: '50px',
-      paddingBottom: '50px',
       afterLoad: function(anchorLink, index) {
         if (index !== 1) {
           $('.colon').text(':');
