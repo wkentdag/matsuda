@@ -23,10 +23,10 @@ block content
 											video.center-block(src=obj.src controls type='video/mp4')
 										else
 
-											.imageContainer
+											.contentContainer
 												img.image-responsive.center-block(src=obj.src)
 												if obj.caption
-														p.caption= obj.caption
+													p.caption= obj.caption
 									
 block scripts
 	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')
