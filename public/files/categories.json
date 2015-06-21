@@ -93,6 +93,17 @@
           "id": "now-i-eat-rice-with-a-fork"
         }
       ]
+    },
+    {
+      "title": "Traces",
+      "galleries": [
+        {
+          "tag": "Traces",
+          "type": "photo",
+          "limit": 10,
+          "id": "traces"
+        }
+      ]
     }
   ]
 }
