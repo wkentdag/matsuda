@@ -27,8 +27,6 @@
 p.caption {
   font-style: italic;
   text-align: center;
-  display: table-caption;
-  caption-side: bottom;
 }
 
 p.about {
@@ -39,10 +37,6 @@ p.about {
   text-decoration: underline;
 }
 
-.imageContainer {
-  display: table;
-  margin: auto;
-}
 
 @import 'sidebar';
 @import 'footer';
