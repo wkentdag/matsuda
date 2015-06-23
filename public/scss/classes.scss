@@ -68,6 +68,15 @@ p.about {
   text-decoration: underline;
 }
 
+span.glyphicon {
+  color: $black;
+  @include transition(0.2s);
+}
+
+span.glyphicon:hover, span.glyphicon:active {
+  color: $blue;
+}
+
 
 @import 'sidebar';
 @import 'footer';
