@@ -24,9 +24,13 @@ block content
 										else
 
 											.contentContainer
-												img.image-responsive.center-block(src=obj.src)
 												if obj.caption
+													.image-wrapper
+														img.image-responsive.center-block(src=obj.src)
 													p.caption= obj.caption
+												else
+													img.image-responsive.center-block(src=obj.src)
+
 									
 block scripts
 	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')

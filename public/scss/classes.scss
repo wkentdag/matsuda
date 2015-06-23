@@ -26,17 +26,38 @@
 }
 
 p.caption {
+  display: none;
   font-style: italic;
   text-align: center;
   position: absolute;
   right: 0;
   bottom: 0;
+  padding: 5px;
+  @include transition(0.2s);
 }
 
 .contentContainer {
   display: inline-block;
   position: relative;
   margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.contentContainer:hover, .contentContainer:active {
+  .image-wrapper {
+    @include filter(10px);
+    opacity: 0.6;
+  }
+
+  p.caption {
+    display: block;
+  }
+  
+}
+
+.image-wrapper {
+  @include transition(0.2s);
 }
 
 p.about {
