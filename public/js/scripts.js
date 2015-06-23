@@ -41,24 +41,28 @@ $(document).ready(function() {
     });
 
     
-    // getWidth();
-    // $(window).resize(function() {
-    //   console.log(getWidth() );
-    // });
+    getWidth();
+    $(window).resize(function() {
+      getWidth();
+    });
 });
 
 function getWidth() {
   var width = $(window).width();
 
-  if (width >= 992) {
+  if (width >= 1500) {
+    imageSource(3);
+    alert(width);
+  } else if (width >= 500) {
     imageSource(2);
-  } else if (width >= 768) {
+    alert(width);
+  } else if (width >= 400) {
     imageSource(1);
+    alert(width);
   } else {
-    imageSource(0)
+    imageSource(0);
+    alert(width);
   }
-
-  return width;
 }
 
 
