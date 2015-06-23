@@ -52,16 +52,12 @@ function getWidth() {
 
   if (width >= 1500) {
     imageSource(3);
-    alert(width);
   } else if (width >= 500) {
     imageSource(2);
-    alert(width);
   } else if (width >= 400) {
     imageSource(1);
-    alert(width);
   } else {
     imageSource(0);
-    alert(width);
   }
 }
 
