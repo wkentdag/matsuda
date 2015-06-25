@@ -22,7 +22,6 @@ block content
 										if video
 											video.center-block(src=obj.src controls type='video/mp4')
 										else
-
 											.contentContainer
 												if obj.caption
 													.image-wrapper
@@ -30,7 +29,6 @@ block content
 													p.caption= obj.caption
 												else
 													img.image-responsive.center-block(src=obj.src)
-
-									
+								
 block scripts
 	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')

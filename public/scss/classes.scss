@@ -18,6 +18,7 @@
 .currentGallery {
   color: $blue;
   font-style: italic;
+  @include transition($transition-default);
 }
 
 .currentGallery:hover {
@@ -33,7 +34,7 @@ p.caption {
   right: 0;
   bottom: 0;
   padding: 5px;
-  @include transition(0.2s);
+  @include transition($transition-default);
 }
 
 .contentContainer {
@@ -41,7 +42,6 @@ p.caption {
   position: relative;
   margin: auto;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .contentContainer:hover, .contentContainer:active {
@@ -57,7 +57,8 @@ p.caption {
 }
 
 .image-wrapper {
-  @include transition(0.2s);
+  cursor: pointer;
+  @include transition($transition-default);
 }
 
 p.about {

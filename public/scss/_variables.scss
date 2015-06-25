@@ -12,6 +12,7 @@ $header-bg: transparent;
   border: 1px dotted red;
 }
 
+$transition-default: 0.2s;
 @mixin transition($time) {
   -webkit-transition: all $time ease;
   -moz-transition: all $time ease;
