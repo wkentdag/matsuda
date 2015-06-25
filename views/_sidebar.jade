@@ -1,11 +1,11 @@
 nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
   .container-fluid
     .sidebar-container
-      p.about= about
+      p.about.hidden-xs= about
 
       h3.paneHeader
         span.header Galleries
-        span :
+        span.headerColon :
         button(type='button')
           span(data-selector='galleries').togglePane.glyphicon.glyphicon-minus
       ul(data-selector='galleries').pane
@@ -24,7 +24,7 @@ nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
                     
       h3.paneHeader
         span.header Published Work
-        span :
+        span.headerColon :
         button(type='button')
           span(data-selector='published').togglePane.glyphicon.glyphicon-plus
       ul(data-selector='published').pane
@@ -37,7 +37,7 @@ nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
 
       h3.paneHeader
         span.header Contact &amp; Inquiries
-        span :
+        span.headerColon :
         button(type='button')
           span(data-selector='contact').togglePane.glyphicon.glyphicon-plus
       ul(data-selector='contact').pane

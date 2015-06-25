@@ -32,6 +32,10 @@ li.withSubsection {
   position: relative;
 }
 
+.headerColon {
+  padding-right: 5px;
+}
+
 .pane:not([data-selector='galleries']) {
   display: none;
 }
