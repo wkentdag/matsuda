@@ -8,7 +8,6 @@ a {
   color: $blue;
   font-family: $body-font;
   text-decoration: none;
-  @include transition($transition-default);
 }
 a:hover {
   color: $pink;

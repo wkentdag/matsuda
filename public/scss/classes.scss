@@ -18,7 +18,6 @@
 .currentGallery {
   color: $blue;
   font-style: italic;
-  @include transition($transition-default);
 }
 
 .currentGallery:hover {
@@ -65,18 +64,26 @@ p.about {
   text-align: right;
 }
 
+
+.paneHeader {
+  cursor: pointer;
+}
 .header {
   text-decoration: underline;
 }
 
-span.glyphicon {
-  color: $black;
-  @include transition(0.2s);
+button {
+  span.glyphicon {
+    color: $black;
+    @include transition($transition-default);
+  }
+
+  span.glyphicon:hover, span.glyphicon:active {
+    color: $blue;
+  }
+
 }
 
-span.glyphicon:hover, span.glyphicon:active {
-  color: $blue;
-}
 
 
 @import 'sidebar';

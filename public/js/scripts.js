@@ -31,7 +31,7 @@ $(document).ready(function() {
     getWidth();
   });
 
-  //  init footer controls
+  //  init js click listeners
   $('#slideLeft').click(function(e) {
     e.preventDefault();
     $.fn.fullpage.moveSlideLeft();
@@ -45,8 +45,22 @@ $(document).ready(function() {
     toggleFullScreen();
   });
   $('#home').click(function(e) {
+    e.preventDefault();
     $.fn.fullpage.moveTo(1);
     document.location.hash = '';
+  });
+  $('.paneHeader').click(function(e) {
+    e.preventDefault();
+    var icon = $(this).find('span.togglePane');
+    var pane = $(this).next('ul.pane');
+
+    $(pane).slideToggle(150, function() {
+      if (icon.hasClass('glyphicon-plus')) {
+        $(icon).removeClass('glyphicon-plus').addClass('glyphicon-minus')
+      } else {
+        $(icon).removeClass('glyphicon-minus').addClass('glyphicon-plus')
+      }
+    });
   });
 });
 

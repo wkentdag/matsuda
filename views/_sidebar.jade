@@ -3,10 +3,12 @@ nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
     .sidebar-container
       p.about= about
 
-      h3
+      h3.paneHeader
         span.header Galleries
         span :
-      ul
+        button(type='button')
+          span(data-selector='galleries').togglePane.glyphicon.glyphicon-minus
+      ul(data-selector='galleries').pane
         each section in sections
           if !section.galleries
             a(href= '#' + section.link)
@@ -20,10 +22,12 @@ nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
                   a(href='#' + gal.link)
                     li.subSection= gal.title
                     
-      h3
+      h3.paneHeader
         span.header Published Work
         span :
-      ul
+        button(type='button')
+          span(data-selector='published').togglePane.glyphicon.glyphicon-plus
+      ul(data-selector='published').pane
         each i in published
           if (i.link)
             a(href=i.link)
@@ -31,10 +35,12 @@ nav#sidebar.navmenu.navmenu-fixed-left.offcanvas(role='navigation')
           else
             li= i.publication
 
-      h3
+      h3.paneHeader
         span.header Contact &amp; Inquiries
         span :
-      ul
+        button(type='button')
+          span(data-selector='contact').togglePane.glyphicon.glyphicon-plus
+      ul(data-selector='contact').pane
         - var mailUrl = "mailto:" + contact.email;
         - var telUrl = "tel:" + contact.phone;
         a(href=mailUrl)

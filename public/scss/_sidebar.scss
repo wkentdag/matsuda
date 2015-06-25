@@ -20,3 +20,18 @@ li.withSubsection {
   margin-left: 5%;
   list-style-type: none;
 }
+
+.togglePane.glyphicon {
+  position: absolute;
+  right: 0;
+  font-size: 60%;
+  cursor: pointer;
+}
+
+.paneHeader {
+  position: relative;
+}
+
+.pane:not([data-selector='galleries']) {
+  display: none;
+}
