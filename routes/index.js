@@ -4,10 +4,12 @@ var text = require('../lib/static-text');
 var staticAssets = require('../lib/sort-static');
 
 router.get('/', function(req, res) {
+  var sections = staticAssets.sections();
+  var galleries = staticAssets.galleries();
 	res.render('index', {
 		title: 'William Matsuda',
-    sections: staticAssets.sections(),
-    galleries: staticAssets.galleries(),
+    sections: sections,
+    galleries: galleries,
 		about: text.landing,
     contact: text.contact,
 		published: text.published,

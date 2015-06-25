@@ -1,50 +1,53 @@
 $(document).ready(function() {
-    var anchors = [];
-    $('.section').each(function(i) {
-      var gallery = $(this).attr('data-gallery');
-      anchors.push(gallery);
-    });
+  //  setup page anchors and fullpage.js
+  var anchors = [];
+  $('.section').each(function(i) {
+    var gallery = $(this).attr('data-gallery');
+    anchors.push(gallery);
+  });
 
-    var titleText = $('.title').text();
+  $('#fullpage').fullpage({
+    loopBottom: true,
+    loopTop: true,
+    controlArrows: false,
+    scrollingSpeed: 500,
+    anchors: anchors,
+    afterLoad: function(anchorLink, index) {
+      if (index !== 1) {
+        $('.colon').text(':');
+        var title = $(this).data('title');
+        $('.currentGallery').text(title);
+        $('.currentHash').attr('href', '#' + $(this).data('gallery'));
+      } else {
+        $('.colon').text('');
+        $('.currentGallery').text('');
+      }        
+    }
+  });
 
-    $('#fullpage').fullpage({
-      loopBottom: true,
-      loopTop: true,
-      controlArrows: false,
-      scrollingSpeed: 500,
-      anchors: anchors,
-      afterLoad: function(anchorLink, index) {
-        if (index !== 1) {
-          $('.colon').text(':');
-          var title = $(this).data('title');
-          $('.currentGallery').text(title);
-          $('.currentHash').attr('href', '#' + $(this).data('gallery'));
-        } else {
-          $('.colon').text('');
-          $('.currentGallery').text('');
-        }        
-      }
-    });
-
-    $('#slideLeft').click(function(e) {
-      e.preventDefault();
-      $.fn.fullpage.moveSlideLeft();
-    });
-    $('#slideRight').click(function(e) {
-      e.preventDefault();
-      $.fn.fullpage.moveSlideRight();
-    });
-
-    $('#fullScreen').click(function(e) {
-      e.preventDefault();
-      toggleFullScreen();
-    });
-
-    
+  //  adjust images according to browser width, setup resize listener
+  getWidth();
+  $(window).resize(function() {
     getWidth();
-    $(window).resize(function() {
-      getWidth();
-    });
+  });
+
+  //  init footer controls
+  $('#slideLeft').click(function(e) {
+    e.preventDefault();
+    $.fn.fullpage.moveSlideLeft();
+  });
+  $('#slideRight').click(function(e) {
+    e.preventDefault();
+    $.fn.fullpage.moveSlideRight();
+  });
+  $('#fullScreen').click(function(e) {
+    e.preventDefault();
+    toggleFullScreen();
+  });
+  $('#home').click(function(e) {
+    $.fn.fullpage.moveTo(1);
+    document.location.hash = '';
+  });
 });
 
 function getWidth() {
