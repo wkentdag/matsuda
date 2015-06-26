@@ -49,10 +49,15 @@ p.caption {
   p.caption {
     display: block;
   }
+
+  span.glyphicon.glyphicon-info-sign {
+    color: $pink;
+  }
   
 }
 
 .image-wrapper {
+  cursor: pointer;
   @include transition($transition-default);
 }
 
@@ -73,6 +78,15 @@ p.caption {
   border-bottom: 50px solid white; 
   border-left: 50px solid $blue; 
 }
+
+span.glyphicon.glyphicon-info-sign {
+  position: absolute;
+  // padding: 1px;
+  color: white;
+  left: 11px;
+  top: 9px;
+}
+
 
 p.about {
   text-align: right;

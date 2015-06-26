@@ -109,6 +109,9 @@ function toggleFullScreen() {
     } else if (document.documentElement.webkitRequestFullscreen) {
       document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
     }
+
+    $('#fsToggle').removeClass('glyphicon-resize-full').addClass('glyphicon-resize-small');
+
   } else {
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -119,5 +122,8 @@ function toggleFullScreen() {
     } else if (document.webkitExitFullscreen) {
       document.webkitExitFullscreen();
     }
+
+    $('#fsToggle').removeClass('glyphicon-resize-small').addClass('glyphicon-resize-full');
+
   }
 }

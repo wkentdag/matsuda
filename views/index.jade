@@ -1,36 +1,36 @@
 extends layout
 block content
-	include _sidebar
-	include _footer
-	include _header
+  include _sidebar
+  include _footer
+  include _header
 
-	.container-fluid
-		#fullpage
-			.section(data-gallery='')
-				.row
-					.col-xs-12
-						.fullpage-container
-							img.image-responsive.center-block(src='build/media/landing/0.jpg')
-			each gallery in galleries
-				.section(data-gallery=gallery.link data-title=gallery.title)
-					each obj in gallery.media
-						.slide
-							.row
-								.col-xs-12
-									.fullpage-container
-										- var video = (obj.src.indexOf('.mp4') > -1);
-										if video
-											video.center-block(src=obj.src controls type='video/mp4')
-										else
-											.contentContainer
-												if obj.caption
-													.image-wrapper
-														img.image-responsive.center-block(src=obj.src)
-													.toggleCaption-container
-														.toggleCaption
-													p.caption= obj.caption
-												else
-													img.image-responsive.center-block(src=obj.src)
-								
-block scripts
-	script(type='text/javascript' src='/build/bower_components/fixie/fixie.min.js')
+  .container-fluid
+    #fullpage
+      .section(data-gallery='')
+        .row
+          .col-xs-12
+            .fullpage-container
+              img.image-responsive.center-block(src='build/media/landing/0.jpg')
+      each gallery in galleries
+        .section(data-gallery=gallery.link data-title=gallery.title)
+          each obj in gallery.media
+            .slide
+              .row
+                .col-xs-12
+                  .fullpage-container
+                    - var video = (obj.src.indexOf('.mp4') > -1);
+                    if video
+                      video.center-block(src=obj.src controls type='video/mp4')
+                    else
+                      .contentContainer
+                        if obj.caption
+                          .image-wrapper
+                            img.image-responsive.center-block(src=obj.src)
+                          .toggleCaption-container
+                            span(title='Show caption').glyphicon.glyphicon-info-sign
+                            .toggleCaption
+                          p.caption= obj.caption
+                        else
+                          img.image-responsive.center-block(src=obj.src)
+
+
