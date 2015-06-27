@@ -10,9 +10,7 @@ block content
         .row
           .col-xs-12
             .fullpage-container
-              .logo-container
-                img.logo-overlay.no-resize.image-responsive.center-block(src='images/logo.svg')
-                img#landing.image-responsive.center-block(src='build/media/landing/0.jpg')
+              img#landing.image-responsive.center-block(src='build/media/landing/0.jpg')
       each gallery in galleries
         .section(data-gallery=gallery.link data-title=gallery.title)
           each obj in gallery.media
@@ -26,11 +24,12 @@ block content
                     else
                       .contentContainer
                         if obj.caption
-                          .image-wrapper
-                            img.image-responsive.center-block(src=obj.src)
+                          .blur-container
+                            .image-wrapper
+                              img.image-responsive.center-block(src=obj.src)
                           .toggleCaption-container
-                            span(title='Show caption').glyphicon.glyphicon-info-sign
                             .toggleCaption
+                              span(title='Show caption').glyphicon.glyphicon-info-sign
                           p.caption= obj.caption
                         else
                           img.image-responsive.center-block(src=obj.src)

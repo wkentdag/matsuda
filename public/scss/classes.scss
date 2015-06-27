@@ -13,6 +13,7 @@
 }
 
 .currentGallery {
+  margin-top: 1%;
   color: $blue;
   font-style: italic;
 }
@@ -28,16 +29,16 @@ p.caption {
   text-align: center;
   position: absolute;
   right: 0px;
-  bottom: 50px;
+  bottom: 20px;
   padding: 5px;
   @include transition($transition-default);
 }
 
 .contentContainer {
+
   display: inline-block;
   position: relative;
   margin: auto;
-  overflow: hidden;
 }
 
 .contentContainer:hover, .contentContainer:active {
@@ -56,35 +57,48 @@ p.caption {
   
 }
 
+.blur-container {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-background {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
 .image-wrapper {
+  background-color: red;
   cursor: pointer;
   @include transition($transition-default);
 }
 
 .toggleCaption-container {
+  z-index: -1;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -20px;
+  bottom: -15px;
   width: 50px;
   height: 50px;
   cursor: pointer;
-  overflow: hidden;
+  background-color: $blue;
 }
 
 
 .toggleCaption {
-  width: 0; 
-  height: 0; 
-  border-bottom: 50px solid white; 
-  border-left: 50px solid $blue; 
+  position: relative;
+  width: 100%; 
+  height: 100%; 
 }
 
 span.glyphicon.glyphicon-info-sign {
   position: absolute;
-  // padding: 1px;
   color: white;
-  left: 11px;
-  top: 9px;
+  right: 4px;
+  top: 28px;
   @include transition($transition-default);
 }
 
@@ -111,17 +125,6 @@ button {
     color: $blue;
   }
 
-}
-
-.logo-container {
-  display: inline-block;
-  position: relative;
-}
-
-.logo-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 
 
