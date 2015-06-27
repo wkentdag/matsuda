@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "clean": "rimraf public/build/media/*",
-    "start": "forever ./bin/www",
+    "start": "node ./bin/www",
     "start-dev": "nodemon ./bin/www"
   },
   "dependencies": {
@@ -13,7 +13,6 @@
     "debug": "~0.7.4",
     "express": "~4.2.0",
     "forEachAsync": "^3.0.0",
-    "forever": "^0.14.1",
     "jade": "~1.3.0",
     "morgan": "~1.0.0",
     "static-favicon": "~1.0.0",
