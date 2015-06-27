@@ -10,7 +10,9 @@ block content
         .row
           .col-xs-12
             .fullpage-container
-              img.image-responsive.center-block(src='build/media/landing/0.jpg')
+              .logo-container
+                img.logo-overlay.no-resize.image-responsive.center-block(src='images/logo.svg')
+                img#landing.image-responsive.center-block(src='build/media/landing/0.jpg')
       each gallery in galleries
         .section(data-gallery=gallery.link data-title=gallery.title)
           each obj in gallery.media

@@ -85,6 +85,7 @@ span.glyphicon.glyphicon-info-sign {
   color: white;
   left: 11px;
   top: 9px;
+  @include transition($transition-default);
 }
 
 
@@ -112,6 +113,16 @@ button {
 
 }
 
+.logo-container {
+  display: inline-block;
+  position: relative;
+}
+
+.logo-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 
 @import 'sidebar';

@@ -78,11 +78,13 @@ function getWidth() {
 
 function imageSource(newIndex) {
   $('img').each(function(i) {
-    var src = $(this).attr('src');
-    var origIndex = src.indexOf('.jpg') - 1;
-    var stem = src.substr(0, origIndex);
-    var newSource = stem + newIndex + '.jpg';
-    $(this).attr('src', newSource);
+    if (!$(this).hasClass('no-resize')) {
+      var src = $(this).attr('src');
+      var origIndex = src.indexOf('.jpg') - 1;
+      var stem = src.substr(0, origIndex);
+      var newSource = stem + newIndex + '.jpg';
+      $(this).attr('src', newSource);
+    }
   });
 }
 
