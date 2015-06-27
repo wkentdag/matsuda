@@ -43,8 +43,8 @@ $transition-default: 0.1s;
     height: 50px;
     cursor: pointer;
     overflow: hidden;
+    border: none;
   }
-
 
   .toggleCaption {
     width: 0; 
@@ -57,9 +57,15 @@ $transition-default: 0.1s;
     position: absolute;
     z-index: 2;
     color: white;
-    right: 20px;
-    top: 5px;
+    right: 27px;
+    top: 8px;
     @include transition($transition-default);
+  }
+
+  p.caption {
+    margin-right: 50px;
+    text-align: left;
+    bottom: 5px;
   }
 }
 

@@ -53,7 +53,11 @@ p.caption {
   }
 
   span.glyphicon.glyphicon-info-sign {
-    color: $pink;
+    display: none;
+  }
+
+  .toggleCaption-container {
+    border-color: white;
   }
   
 }
@@ -85,7 +89,10 @@ p.caption {
   width: 50px;
   height: 50px;
   cursor: pointer;
-  background-color: $blue;
+  background-color: white;
+  border-right: 2px solid $blue;
+  border-bottom: 2px solid $blue;
+  @include transition($transition-default);
 }
 
 
@@ -97,7 +104,7 @@ p.caption {
 
 span.glyphicon.glyphicon-info-sign {
   position: absolute;
-  color: white;
+  color: $blue;
   right: 4px;
   top: 28px;
   @include transition($transition-default);
@@ -125,7 +132,12 @@ button {
   span.glyphicon:hover, span.glyphicon:active {
     color: $blue;
   }
+}
 
+img.icon {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
 }
 
 
