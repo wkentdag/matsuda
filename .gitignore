@@ -1,10 +1,7 @@
-
 *.log
 *.pid
 *.seed
-
 node_modules
-
 public/*
 !public/files
 !public/images
@@ -12,6 +9,5 @@ public/*
 public/build/*
 !public/build/javascripts/*
 !public/build/stylesheets/*
-
 tumblr-auth.js
 .DS_Store
