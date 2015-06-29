@@ -1,5 +1,9 @@
 #!/bin/bash
+PORT=4000
+MEDIA_DIR=public/build/media
 
+
+# pull from beta
 while read oldrev newrev ref
 do
   if [[ $ref =~ .*/beta$ ]];
@@ -11,15 +15,33 @@ do
   fi
 done
 
+
+# install npm & bower dependencies
 echo "Installing NPM dependencies..."
 npm install
-
 echo "Installing Bower dependencies..."
 bower install
 
-if DEBUG=matsuda PORT=4000 forever restart bin/www; then
-  echo "Forever restarted app"
+
+# check if need to bundle media, restart app
+if [ -d "$MEDIA_DIR" ]; then
+
+  echo "media directory exists; starting app without bundling media"
+  if DEBUG=matsuda PORT=$PORT forever restart bin/www; then
+    echo "Forever restarted app on port $PORT"
+  else
+    DEBUG=matsuda PORT=$PORT forever start bin/www
+    echo "Forever started app on port $PORT"
+  fi
+
 else
-  DEBUG=matsuda PORT=4000 forever start bin/www
-  echo "Forever started app"
+
+  echo "Media directory doesn't exist; will download media before starting app"
+  if DEBUG=matsuda PORT=$PORT BUNDLE=true forever restart bin/www; then
+    echo "Forever restarted app on port $PORT"
+  else
+    DEBUG=matsuda PORT=$PORT BUNDLE=true forever start bin/www
+    echo "Forever started app on port $PORT"
+  fi
+  
 fi
