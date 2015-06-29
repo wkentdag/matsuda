@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "clean": "rimraf public/build/media/*",
-    "start": "forever ./bin/www",
+    "start": "node ./bin/www",
     "start-dev": "nodemon ./bin/www"
   },
   "dependencies": {
