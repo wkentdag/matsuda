@@ -59,7 +59,7 @@ p.caption {
   .toggleCaption-container {
     border-color: white;
   }
-  
+
 }
 
 .blur-container {
@@ -98,8 +98,8 @@ p.caption {
 
 .toggleCaption {
   position: relative;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
 }
 
 span.glyphicon.glyphicon-info-sign {
@@ -132,6 +132,22 @@ button {
   span.glyphicon:hover, span.glyphicon:active {
     color: $blue;
   }
+}
+
+.slidecount-wrapper {
+  position: absolute;
+  bottom: 40px;
+  right: 0px;
+  height: 20px;
+  width: 50px;
+  text-align: right;
+}
+
+.counter-container {
+  color: $blue;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 

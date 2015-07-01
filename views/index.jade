@@ -13,25 +13,32 @@ block content
               img#landing.image-responsive.center-block(src='build/media/landing/0.jpg')
       each gallery in galleries
         .section(data-gallery=gallery.link data-title=gallery.title)
-          each obj in gallery.media
-            .slide
-              .row
-                .col-xs-12
-                  .fullpage-container
-                    - var video = (obj.src.indexOf('.mp4') > -1);
-                    if video
-                      video.center-block(src=obj.src controls type='video/mp4')
-                    else
-                      .contentContainer
-                        if obj.caption
-                          .blur-container
-                            .image-wrapper
-                              img.image-responsive.center-block(src=obj.src)
-                          .toggleCaption-container
-                            .toggleCaption
-                              span(title='Show caption').glyphicon.glyphicon-info-sign
-                          p.caption= obj.caption
-                        else
-                          img.image-responsive.center-block(src=obj.src)
-
-
+          .slide-wrapper
+            .slidecount-wrapper
+              .counter-container
+                - var numImages = gallery.media.length;
+                h4.slideCount
+                  span.slideIndex 1
+                  span /
+                  span.numSlides= numImages
+            - var mediaNum = 1;
+            each obj in gallery.media
+              .slide(data-anchor="#{mediaNum++}")
+                .row
+                  .col-xs-12
+                    .fullpage-container
+                      - var video = (obj.src.indexOf('.mp4') > -1);
+                      if video
+                        video.center-block(src=obj.src controls type='video/mp4')
+                      else
+                        .contentContainer
+                          if obj.caption
+                            .blur-container
+                              .image-wrapper
+                                img.image-responsive.center-block(src=obj.src)
+                            .toggleCaption-container
+                              .toggleCaption
+                                span(title='Show caption').glyphicon.glyphicon-info-sign
+                            p.caption= obj.caption
+                          else
+                            img.image-responsive.center-block(src=obj.src)
