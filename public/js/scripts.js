@@ -25,6 +25,7 @@ $(document).ready(function() {
     },
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
       $('span.slideIndex').text(slideIndex + 1);
+    }
   });
 
   //  adjust images according to browser width, setup resize listener
