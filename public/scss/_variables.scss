@@ -47,10 +47,10 @@ $transition-default: 0.1s;
   }
 
   .toggleCaption {
-    width: 0; 
-    height: 0; 
-    border-bottom: 50px solid white; 
-    border-left: 50px solid $blue; 
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid white;
+    border-left: 50px solid $blue;
   }
 
   span.glyphicon.glyphicon-info-sign {
@@ -72,6 +72,16 @@ $transition-default: 0.1s;
 @media (min-width: 768px) {
   .fullpage-container, img, video {
     max-height: 500px;
+    max-width: 900px;
+    float: left;
+  }
+
+  .fullpage-container {
+    margin-left: 300px;
+  }
+
+  #sidebar {
+    width: 300px;
   }
 }
 
