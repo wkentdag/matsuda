@@ -2,6 +2,7 @@
 PORT=3000
 MEDIA_DIR=public/build/media
 
+# test
 
 # pull from master
 while read oldrev newrev ref
