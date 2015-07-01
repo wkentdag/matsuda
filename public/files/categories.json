@@ -1,6 +1,56 @@
 {
   "categories": [
     {
+      "title": "International Relations",
+      "galleries": [
+        {
+          "tag": "International Relations",
+          "type": "photo",
+          "limit": 10,
+          "id": "intl-relations"
+        }
+      ]
+    },
+    {
+      "title": "Now I Eat Rice With a Fork",
+      "galleries": [
+        {
+          "tag": "Now I Eat Rice With a Fork",
+          "type": "photo",
+          "limit": 10,
+          "id": "now-i-eat-rice-with-a-fork"
+        }
+      ]
+    },
+    {
+      "title": "Traces",
+      "galleries": [
+        {
+          "tag": "Traces",
+          "type": "photo",
+          "limit": 10,
+          "id": "traces"
+        }
+      ]
+    },
+    {
+      "title": "News",
+      "galleries": [
+        {
+          "tag": "Minnesota Public Radio",
+          "type": "photo",
+          "limit": 10,
+          "id": "mpr"
+        },
+        {
+          "tag": "The Global Post",
+          "type": "photo",
+          "limit": 10,
+          "id": "global-post"
+        }
+      ]
+    },
+    {
       "title": "Lovers",
       "galleries": [
         {
@@ -8,6 +58,17 @@
           "type": "photo",
           "limit": 10,
           "id": "lovers"
+        }
+      ]
+    },
+    {
+      "title": "Travel",
+      "galleries": [
+        {
+          "tag": "Travel",
+          "type": "photo",
+          "limit": 10,
+          "id": "travel"
         }
       ]
     },
@@ -41,67 +102,6 @@
           "type": "video",
           "limit": 5,
           "id": "video"
-        }
-      ]
-    },
-    {
-      "title": "News",
-      "galleries": [
-        {
-          "tag": "Minnesota Public Radio",
-          "type": "photo",
-          "limit": 10,
-          "id": "mpr"
-        },
-        {
-          "tag": "The Global Post",
-          "type": "photo",
-          "limit": 10,
-          "id": "global-post"
-        }
-      ]
-    },
-    {
-      "title": "Travel",
-      "galleries": [
-        {
-          "tag": "Travel",
-          "type": "photo",
-          "limit": 10,
-          "id": "travel"
-        }
-      ]
-    },
-    {
-      "title": "International Relations",
-      "galleries": [
-        {
-          "tag": "International Relations",
-          "type": "photo",
-          "limit": 10,
-          "id": "intl-relations"
-        }
-      ]
-    },
-    {
-      "title": "Now I Eat Rice With a Fork",
-      "galleries": [
-        {
-          "tag": "Now I Eat Rice With a Fork",
-          "type": "photo",
-          "limit": 10,
-          "id": "now-i-eat-rice-with-a-fork"
-        }
-      ]
-    },
-    {
-      "title": "Traces",
-      "galleries": [
-        {
-          "tag": "Traces",
-          "type": "photo",
-          "limit": 10,
-          "id": "traces"
         }
       ]
     }
