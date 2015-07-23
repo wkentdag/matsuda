@@ -12,6 +12,9 @@ a {
 a:hover, a:focus {
   color: $pink;
 }
+a.hover {
+  color: $pink;
+}
 a:visited {
   color: $blue;
   font-family: $body-font;

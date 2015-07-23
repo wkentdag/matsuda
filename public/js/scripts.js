@@ -14,10 +14,12 @@ $(document).ready(function() {
     anchors: anchors,
     afterLoad: function(anchorLink, index) {
       if (index !== 1) {
+        $('ul > a.hover').removeClass('hover');
         $('.colon').text(':');
         var title = $(this).data('title');
         $('.currentGallery').text(title);
         $('.currentHash').attr('href', '#' + $(this).data('gallery'));
+        $('ul > a[data-gallery=' + $(this).data('gallery') + ']').addClass('hover');
       } else {
         $('.colon').text('');
         $('.currentGallery').text('');
