@@ -1,6 +1,23 @@
 {
   "categories": [
     {
+      "title": "News",
+      "galleries": [
+        {
+          "tag": "Minnesota Public Radio",
+          "type": "photo",
+          "limit": 10,
+          "id": "mpr"
+        },
+        {
+          "tag": "The Global Post",
+          "type": "photo",
+          "limit": 10,
+          "id": "global-post"
+        }
+      ]
+    },
+    {
       "title": "International Relations",
       "galleries": [
         {
@@ -34,23 +51,6 @@
       ]
     },
     {
-      "title": "News",
-      "galleries": [
-        {
-          "tag": "Minnesota Public Radio",
-          "type": "photo",
-          "limit": 10,
-          "id": "mpr"
-        },
-        {
-          "tag": "The Global Post",
-          "type": "photo",
-          "limit": 10,
-          "id": "global-post"
-        }
-      ]
-    },
-    {
       "title": "Lovers",
       "galleries": [
         {
@@ -69,28 +69,6 @@
           "type": "photo",
           "limit": 10,
           "id": "travel"
-        }
-      ]
-    },
-    {
-      "title": "Fashion",
-      "galleries": [
-        {
-          "tag": "Fashion",
-          "type": "photo",
-          "limit": 10,
-          "id": "fashion"
-        }
-      ]
-    },
-    {
-      "title": "Everyday",
-      "galleries": [
-        {
-          "tag": "Everyday",
-          "type": "photo",
-          "limit": 10,
-          "id": "everyday"
         }
       ]
     },
