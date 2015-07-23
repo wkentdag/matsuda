@@ -10,7 +10,6 @@ router.get('/', function(req, res) {
 		title: 'William Matsuda',
     sections: sections,
     galleries: galleries,
-		about: text.landing,
     contact: text.contact,
 		published: text.published,
 	});
