@@ -28,7 +28,7 @@ $transition-default: 0.1s;
   filter: blur($px);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 990px) {
   .fullpage-container, img, video {
     max-height: 100%;
     max-width: 100%;
@@ -69,7 +69,7 @@ $transition-default: 0.1s;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .fullpage-container, img, video {
     max-height: 500px;
     max-width: 900px;

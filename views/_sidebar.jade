@@ -1,50 +1,49 @@
-nav#sidebar.navmenu.navmenu-fixed-left.offcanvas-sm(role='navigation')
+#sidebar.navmenu.navmenu-fixed-left.offcanvas-sm(role='navigation')
   .container-fluid
-    .sidebar-container
 
-      h3.paneHeader
-        span.header Projects
-        span.headerColon :
-        button(type='button')
-          span(data-selector='galleries').togglePane.glyphicon.glyphicon-minus
-      ul(data-selector='galleries').pane
-        each section in sections
-          if !section.galleries
-            a(href= '#' + section.link data-gallery=section.link)
-              li= section.title
-          else
-            li.withSubsection
-                span= section.title
-                span :
-              ul
-                each gal in section.galleries
-                  a(href='#' + gal.link data-gallery=gal.link)
-                    li.subSection= gal.title
-                    
-      h3.paneHeader
-        span.header Published Work
-        span.headerColon :
-        button(type='button')
-          span(data-selector='published').togglePane.glyphicon.glyphicon-plus
-      ul(data-selector='published').pane
-        each i in published
-          if (i.link)
-            a(href=i.link)
-              li= i.publication
-          else
+    h3.paneHeader
+      span.header Projects
+      span.headerColon :
+      button(type='button')
+        span(data-selector='galleries').togglePane.glyphicon.glyphicon-minus
+    ul(data-selector='galleries').pane
+      each section in sections
+        if !section.galleries
+          a(href= '#' + section.link data-gallery=section.link)
+            li= section.title
+        else
+          li.withSubsection
+              span= section.title
+              span :
+            ul
+              each gal in section.galleries
+                a(href='#' + gal.link data-gallery=gal.link)
+                  li.subSection= gal.title
+                  
+    h3.paneHeader
+      span.header Published Work
+      span.headerColon :
+      button(type='button')
+        span(data-selector='published').togglePane.glyphicon.glyphicon-plus
+    ul(data-selector='published').pane
+      each i in published
+        if (i.link)
+          a(href=i.link)
             li= i.publication
+        else
+          li= i.publication
 
-      h3.paneHeader
-        span.header Contact &amp; Inquiries
-        span.headerColon :
-        button(type='button')
-          span(data-selector='contact').togglePane.glyphicon.glyphicon-plus
-      ul(data-selector='contact').pane
-        - var mailUrl = "mailto:" + contact.email;
-        - var telUrl = "tel:" + contact.phone;
-        a(href=mailUrl)
-          li= contact.email
-        a(href=telUrl)
-          li=contact.phone
+    h3.paneHeader
+      span.header Contact &amp; Inquiries
+      span.headerColon :
+      button(type='button')
+        span(data-selector='contact').togglePane.glyphicon.glyphicon-plus
+    ul(data-selector='contact').pane
+      - var mailUrl = "mailto:" + contact.email;
+      - var telUrl = "tel:" + contact.phone;
+      a(href=mailUrl)
+        li= contact.email
+      a(href=telUrl)
+        li=contact.phone
 
     
