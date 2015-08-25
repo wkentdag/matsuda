@@ -13,8 +13,9 @@ $(document).ready(function() {
     scrollingSpeed: 500,
     anchors: anchors,
     afterLoad: function(anchorLink, index) {
+      $('ul > a.hover').removeClass('hover');
+
       if (index !== 1) {
-        $('ul > a.hover').removeClass('hover');
         $('.colon').text(':');
         var title = $(this).data('title');
         $('.currentGallery').text(title);
