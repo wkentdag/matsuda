@@ -4,6 +4,15 @@
   // @include test();
 }
 
+.arrow-container {
+  // @include test();
+  height: 100%;
+  width: auto;
+  margin: auto;
+  float: right;
+  padding-right: 50px;
+}
+
 .control-container {
   // @include test();
   height: 100%;
@@ -11,4 +20,3 @@
   margin: auto;
   float: left;
 }
-

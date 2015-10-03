@@ -125,22 +125,26 @@ p.about {
 
 button {
   span.glyphicon {
-    color: $black;
+    color: $blue;
     @include transition($transition-default);
   }
 
   span.glyphicon:hover, span.glyphicon:active {
-    color: $blue;
+    color: $black;
   }
 }
 
 .slidecount-wrapper {
   position: absolute;
-  bottom: 40px;
+  bottom: 43px;
   right: 0px;
   height: 20px;
   width: 50px;
   text-align: right;
+}
+
+h4.slideCount {
+  font-size: 180%;
 }
 
 .counter-container {

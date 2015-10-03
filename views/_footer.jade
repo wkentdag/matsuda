@@ -3,11 +3,11 @@
     .control-container#menuToggle-container.hidden-md.hidden-lg
       button(type='button' data-toggle='offcanvas' data-target='#sidebar' data-canvas='body')
         span(title='Menu').glyphicon.glyphicon-menu-hamburger
-    .control-container#slidesNav-container.hidden-xs
+    .control-container#fullscreen-container.hidden-xs
+      button#fullScreen(type='button')
+        span#fsToggle(title='Toggle fullscreen').glyphicon.glyphicon-resize-full
+    .arrow-container#slidesNav-container.hidden-xs
       button#slideLeft(type='button')
         span(title='Previous image').glyphicon.glyphicon-chevron-left
       button#slideRight(type='button')
         span(title='Next image').glyphicon.glyphicon-chevron-right
-    .control-container#fullscreen-container.hidden-xs
-      button#fullScreen(type='button')
-        span#fsToggle(title='Toggle fullscreen').glyphicon.glyphicon-resize-full
