@@ -1,6 +1,17 @@
 {
   "categories": [
     {
+      "title": "Minnesota",
+      "galleries": [
+        {
+          "tag": "Minnesota",
+          "type": "photo",
+          "limit": 10,
+          "id": "minnesota"
+        }
+      ]
+    },
+    {
       "title": "The Western Kingdom",
       "galleries": [
         {
