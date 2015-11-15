@@ -34,6 +34,17 @@
       ]
     },
     {
+      "title": "Cotton & Reed Distillery",
+      "galleries": [
+        {
+          "tag": "Cotton And Reed Distillery",
+          "type": "photo",
+          "limit": 10,
+          "id": "cotton-and-reed"
+        }
+      ]
+    },
+    {
       "title": "Now I Eat Rice With a Fork",
       "galleries": [
         {

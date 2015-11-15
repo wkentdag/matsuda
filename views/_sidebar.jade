@@ -28,7 +28,7 @@
     ul(data-selector='published').pane
       each i in published
         if (i.link)
-          a(href=i.link)
+          a(href=i.link target="_blank")
             li= i.publication
         else
           li= i.publication

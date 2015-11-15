@@ -1,16 +1,29 @@
 {
 	"published": [
 		{
-			"publication": "Minnesota Public Radio"
+			"publication": "The Washington Post",
+			"link": "https://www.washingtonpost.com/news/going-out-guide/wp/2015/10/28/rum-is-the-next-addition-to-d-c-s-homegrown-spirits-scene/"
 		},
 		{
-			"publication": "The Global Post"
+			"publication": "Minnesota Public Radio",
+			"link": "http://www.mprnews.org/story/2014/08/19/green-line-impact?from=business"
 		},
 		{
-			"publication": "Zester Daily"
+			"publication": "The Global Post",
+			"link": "http://www.globalpost.com/photo/6514871/2015/04/13/underage-brides-1-2015-4-13"
 		},
 		{
-			"publication": "The Mac Weekly"
+			"publication": "Zester Daily",
+			"link": "http://zesterdaily.com/cooking/lemongrass-is-key-to-soothing-cambodian-stir-fry/"
+		},
+		{
+			"publication": "DC Inno",
+			"link": "http://dcinno.streetwise.co/2015/11/02/new-dc-distillery-cotton-and-reed-coming-to-union-market/"
+		},
+		{
+			"publication": "Macalester College",
+			"link": "http://www.macalester.edu/news/2014/11/soccer-from-both-sides/#/0"
+
 		}
 	]
 }
